@@ -3,16 +3,14 @@ publishDir = "docs"
 
 title = "Panduan Ubuntu Server 20.04 LTS"
 theme = "learn"
-landingPageURL = "https://musaamin.github.io/ubuntu2004/"
-
-
-googleAnalytics = "G-0RQNBJMD57"
 
 [params]
  author = "Musa Amin"
  description = "Panduan Ubuntu Server 20.04 LTS"
  titleSeparator = " - "
  disableBreadcrumb = false
+ disableShortcutsTitle = true
+
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]
