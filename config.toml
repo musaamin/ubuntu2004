@@ -3,6 +3,8 @@ publishDir = "docs"
 
 title = "Panduan Ubuntu Server 20.04 LTS"
 theme = "learn"
+landingPageURL = "/"
+
 
 googleAnalytics = "G-0RQNBJMD57"
 
