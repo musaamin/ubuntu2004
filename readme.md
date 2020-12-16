@@ -1,3 +1,5 @@
+# Panduan Ubuntu Server 20.04 LTS
+
 #### Halo teman-teman superuser
 
 Panduan Ubuntu Server 20.04 LTS adalah panduan bagaimana cara menggunakan Ubuntu sebagai sistem operasi server untuk membangun sebuah web server. Aplikasi server yang dibahas yaitu Apache dan Nginx web server, MariaDB database, PHP, dan SSL dengan Let's Encrypt. Selain itu, dibahas juga bagaimana cara install WordPress, sekaligus menjadi bahan pengujian untuk menjalankan website berbasis PHP dan MariaDB database. Panduan ini menggunakan Virtual Private Server (VPS) sehingga tidak ada pembahasan tentang bagaimana cara instalasi Ubuntu, karena VPS sudah terpasang sistem operasi.
