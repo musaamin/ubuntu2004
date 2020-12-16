@@ -8,7 +8,7 @@ pre: "9. "
 
 Firewall adalah sistem keamanan yang berfungsi untuk mengelola dan memantau trafik jaringan yang masuk dan keluar berdasarkan aturan keamanan (security rules) yang sudah ditentukan. Firewall dapat berupa perangkat keras atau perangkat lunak.
 
-![Gambar Topologi Firewall](/images/topologi-firewall.jpg)
+![Gambar Topologi Firewall](https://raw.githubusercontent.com/musaamin/ubuntu2004/main/static/images/topologi-firewall.jpg)
 
 ## Cloud Firewall
 
@@ -16,11 +16,11 @@ Beberapa penyedia cloud server memiliki fitur cloud firewall yang dapat dikonfig
 
 Cloud firewall secara default mengijinkan semua trafik jaringan yang berasal dari server menuju keluar jaringan (Output/Outbound/Egress).
 
-![Gambar Firewall Rule Outbund](/images/cloud-firewall-outbound.jpg)
+![Gambar Firewall Rule Outbund](https://raw.githubusercontent.com/musaamin/ubuntu2004/main/static/images/cloud-firewall-outbound.jpg)
 
 Sedangkan untuk trafik jaringan dari luar menuju ke dalam server (Input/Inbound/Ingress) secara default diblokir semua, kecuali rule yang dituliskan.
 
-![Gambar Firewall Rule Outbund](/images/cloud-firewall-inbound.jpg)
+![Gambar Firewall Rule Outbund](https://raw.githubusercontent.com/musaamin/ubuntu2004/main/static/images/cloud-firewall-inbound.jpg)
 
 ## IPTables
 

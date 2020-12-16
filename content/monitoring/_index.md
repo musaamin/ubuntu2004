@@ -24,9 +24,9 @@ Jalankan htop.
 htop
 ```
 
-![Gambar htop bagian atas](/images/htop-atas.jpg)
+![Gambar htop bagian atas](https://raw.githubusercontent.com/musaamin/ubuntu2004/main/static/images/htop-atas.jpg)
 
-![Gambar htop bagian bawah](/images/htop-bawah.jpg)
+![Gambar htop bagian bawah](https://raw.githubusercontent.com/musaamin/ubuntu2004/main/static/images/htop-bawah.jpg)
 
 ## df - Report File System Disk Space Usage
 

@@ -41,4 +41,4 @@ Sebelum mempraktikkan panduan ini, siapkan terlebih dahulu perangkat yang dibutu
 - Facebook: [facebook.com/musaaminwebid](https://www.facebook.com/musaaminwebid)
 - GitHub: [musaamin](https://github.com/musaamin)
 
-![MusaAmin.Web.ID - Linux System Administrator](/images/linuxsysadmin.png)
+![MusaAmin.Web.ID - Linux System Administrator](https://raw.githubusercontent.com/musaamin/ubuntu2004/main/static/images/linuxsysadmin.png)
