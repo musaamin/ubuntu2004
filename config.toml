@@ -4,6 +4,8 @@ publishDir = "docs"
 title = "Panduan Ubuntu Server 20.04 LTS"
 theme = "learn"
 
+googleAnalytics = "G-0RQNBJMD57"
+
 [params]
  author = "Musa Amin"
  description = "Panduan Ubuntu Server 20.04 LTS"
