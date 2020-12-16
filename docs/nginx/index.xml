@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Nginx Web Server on Panduan Ubuntu Server 20.04 LTS</title>
-    <link>https://musaamin.github.io/ubuntu2004/nginx/</link>
+    <link>/nginx/</link>
     <description>Recent content in Nginx Web Server on Panduan Ubuntu Server 20.04 LTS</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 16 Dec 2020 08:59:54 +0700</lastBuildDate><atom:link href="https://musaamin.github.io/ubuntu2004/nginx/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 16 Dec 2020 08:59:54 +0700</lastBuildDate><atom:link href="/nginx/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

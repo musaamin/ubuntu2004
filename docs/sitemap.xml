@@ -3,116 +3,116 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://musaamin.github.io/ubuntu2004/vps/</loc>
+    <loc>/vps/</loc>
     <lastmod>2020-12-14T20:56:40+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://musaamin.github.io/ubuntu2004/ssh/</loc>
+    <loc>/ssh/</loc>
     <lastmod>2020-12-14T21:39:50+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://musaamin.github.io/ubuntu2004/filetransfer/</loc>
+    <loc>/filetransfer/</loc>
     <lastmod>2020-12-15T20:56:22+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://musaamin.github.io/ubuntu2004/timezone/</loc>
+    <loc>/timezone/</loc>
     <lastmod>2020-12-15T21:28:07+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://musaamin.github.io/ubuntu2004/apache/</loc>
+    <loc>/apache/</loc>
     <lastmod>2020-12-15T21:31:26+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://musaamin.github.io/ubuntu2004/apache/php-apache/</loc>
+    <loc>/apache/php-apache/</loc>
     <lastmod>2020-12-15T22:00:56+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://musaamin.github.io/ubuntu2004/composer/</loc>
+    <loc>/composer/</loc>
     <lastmod>2020-12-15T22:13:17+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://musaamin.github.io/ubuntu2004/mariadb/</loc>
+    <loc>/mariadb/</loc>
     <lastmod>2020-12-16T05:13:01+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://musaamin.github.io/ubuntu2004/apache/phpmyadmin-apache/</loc>
+    <loc>/apache/phpmyadmin-apache/</loc>
     <lastmod>2020-12-16T05:23:58+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://musaamin.github.io/ubuntu2004/apache/letsencrypt-apache/</loc>
+    <loc>/apache/letsencrypt-apache/</loc>
     <lastmod>2020-12-16T05:56:52+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://musaamin.github.io/ubuntu2004/apache/wordpress-apache/</loc>
+    <loc>/apache/wordpress-apache/</loc>
     <lastmod>2020-12-16T06:06:16+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://musaamin.github.io/ubuntu2004/nginx/</loc>
+    <loc>/nginx/</loc>
     <lastmod>2020-12-16T08:59:54+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://musaamin.github.io/ubuntu2004/nginx/php-nginx/</loc>
+    <loc>/nginx/php-nginx/</loc>
     <lastmod>2020-12-16T09:09:53+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://musaamin.github.io/ubuntu2004/nginx/phpmyadmin-nginx/</loc>
+    <loc>/nginx/phpmyadmin-nginx/</loc>
     <lastmod>2020-12-16T09:30:48+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://musaamin.github.io/ubuntu2004/nginx/letsencrypt-nginx/</loc>
+    <loc>/nginx/letsencrypt-nginx/</loc>
     <lastmod>2020-12-16T09:44:22+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://musaamin.github.io/ubuntu2004/nginx/wordpress-nginx/</loc>
+    <loc>/nginx/wordpress-nginx/</loc>
     <lastmod>2020-12-16T09:46:46+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://musaamin.github.io/ubuntu2004/firewall/</loc>
+    <loc>/firewall/</loc>
     <lastmod>2020-12-16T10:03:17+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://musaamin.github.io/ubuntu2004/monitoring/</loc>
+    <loc>/monitoring/</loc>
     <lastmod>2020-12-16T10:53:05+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://musaamin.github.io/ubuntu2004/log/</loc>
+    <loc>/log/</loc>
     <lastmod>2020-12-16T11:14:17+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://musaamin.github.io/ubuntu2004/backup/</loc>
+    <loc>/backup/</loc>
     <lastmod>2020-12-16T11:20:15+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://musaamin.github.io/ubuntu2004/</loc>
+    <loc>/</loc>
     <lastmod>2020-12-16T11:20:15+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://musaamin.github.io/ubuntu2004/categories/</loc>
+    <loc>/categories/</loc>
   </url>
   
   <url>
-    <loc>https://musaamin.github.io/ubuntu2004/tags/</loc>
+    <loc>/tags/</loc>
   </url>
   
 </urlset>

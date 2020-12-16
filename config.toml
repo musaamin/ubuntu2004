@@ -1,4 +1,4 @@
-baseURL = "https://musaamin.github.io/ubuntu2004/"
+baseURL = "/"
 publishDir = "docs"
 title = "Panduan Ubuntu Server 20.04 LTS"
 theme = "learn" 
@@ -14,26 +14,26 @@ theme = "learn"
 home = ["HTML", "RSS", "JSON"]
 
 [[menu.shortcuts]]
- name = "> Blog"
+ name = "<i class='fab fa-fw fa-firefox'></i> Blog"
  url = "https://musaamin.web.id"
  weight = 1
 
 [[menu.shortcuts]]
- name = "> YouTube"
+ name = "<i class='fab fa-fw fa-youtube'></i> YouTube"
  url = "https://www.youtube.com/musaamin"
  weight = 2
 
 [[menu.shortcuts]]
- name = "> Twitter"
+ name = "<i class='fab fa-fw fa-twitter'></i> Twitter"
  url = "https://www.twitter.com/musaamin"
  weight = 3
 
 [[menu.shortcuts]] 
- name = "> Facebook"
+ name = "<i class='fab fa-fw fa-facebook'></i> Facebook"
  url = "https://www.facebook.com/musaaminwebid"
  weight = 4 
 
 [[menu.shortcuts]] 
- name = "> GitHub"
+ name = "<i class='fab fa-fw fa-github'></i> GitHub"
  url = "https://github.com/musaamin"
  weight = 5

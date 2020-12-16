@@ -8,7 +8,7 @@ pre: "1. "
 
 Virtual Private Server (VPS) adalah server yang dibangun dengan menggunakan hypervisor, perangkat lunak yang dapat membagi mesin fisik menjadi beberapa mesin virtual. VPS bisa didapatkan dengan menyewa dari perusahaan penyedia server dengan perhitungan biaya sewa minimum per bulan atau per jam.
 
-### Kapan menggunakan VPS?
+## Kapan menggunakan VPS?
 - Sumber daya yang dimiliki shared hosting sudah tidak mencukupi untuk menjalankan aplikasi (kelebihan beban)
 - Shared hosting tidak mendukung untuk menjalankan aplikasi
 - Server ingin dikontrol secara penuh
@@ -16,7 +16,20 @@ Virtual Private Server (VPS) adalah server yang dibangun dengan menggunakan hype
 
 Yang harus dipersiapkan sebelum menggunakan VPS adalah tersedianya sumber daya manusia yang memiliki keterampilan sebagai seorang system administrator, khususnya administrasi sistem operasi server berbasis Linux, karena umumnya VPS tersedia dengan sistem operasi berbasis Linux. Selain itu harus menyiapkan biaya lebih dibandingkan dengan shared hosting.
 
-### Menghubungkan Domain ke VPS
+## Menyewa dan Membuat VPS
+
+Provider VPS di Indonesia umumnya menyewakan VPS dengan biaya sewa per bulan. Ada juga provider VPS dengan model cloud, menyewakan sesuai dengan pemakaian, minimum sewa per jam tapi harus deposit terlebih dahulu.
+
+Cara membuat VPS sangat mudah, umumnya cukup dengan 5 langkah saja:
+
+1. Memilih lokasi data center, jika memiliki banyak lokasi data center
+1. Memilih spesifikasi server
+1. Memilih sistem operasi
+1. Memilih metode login SSH, memakai password atau key
+1. Mengisi hostname
+
+
+## Menghubungkan Domain ke VPS
 Menghubungkan nama domain dengan VPS dapat dilakukan dengan melakukan konfigurasi pada DNS Record melalui DNS Management yang terdapat di client area penyedia nama domain.
 
 **Tabel DNS Records**

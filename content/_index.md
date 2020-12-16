@@ -2,9 +2,9 @@
 title: "Home"
 ---
 
-# Tentang
+# Hello World
 
-#### Halo teman-teman superuser
+Hello teman-teman superuser
 
 Panduan Ubuntu Server 20.04 LTS adalah panduan bagaimana cara menggunakan Ubuntu sebagai sistem operasi server untuk membangun sebuah web server. Aplikasi server yang dibahas yaitu Apache dan Nginx web server, MariaDB database, PHP, dan SSL dengan Let's Encrypt. Selain itu, dibahas juga bagaimana cara install WordPress, sekaligus menjadi bahan pengujian untuk menjalankan website berbasis PHP dan MariaDB database. Panduan ini menggunakan Virtual Private Server (VPS) sehingga tidak ada pembahasan tentang bagaimana cara instalasi Ubuntu, karena VPS sudah terpasang sistem operasi.
 
@@ -41,4 +41,4 @@ Sebelum mempraktikkan panduan ini, siapkan terlebih dahulu perangkat yang dibutu
 - Facebook: [facebook.com/musaaminwebid](https://www.facebook.com/musaaminwebid)
 - GitHub: [musaamin](https://github.com/musaamin)
 
-![MusaAmin.Web.ID - Linux System Administrator](https://raw.githubusercontent.com/musaamin/ubuntu2004/main/static/images/linuxsysadmin.png)
+![MusaAmin.Web.ID - Linux System Administrator](/images/linuxsysadmin.png)
