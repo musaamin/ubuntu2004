@@ -8,7 +8,7 @@ theme = "learn"
  description = "Panduan Ubuntu Server 20.04 LTS"
  titleSeparator = " - "
  disableBreadcrumb = false
- landingPageURL = "/"
+ disableLandingPageButton = true
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]
