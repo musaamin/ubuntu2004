@@ -1,16 +1,14 @@
 baseURL = "https://musaamin.github.io/ubuntu2004/"
 publishDir = "docs"
-
 title = "Panduan Ubuntu Server 20.04 LTS"
-theme = "learn"
+theme = "learn" 
 
 [params]
  author = "Musa Amin"
  description = "Panduan Ubuntu Server 20.04 LTS"
  titleSeparator = " - "
  disableBreadcrumb = false
- disableShortcutsTitle = true
-
+ landingPageURL = "/"
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]
