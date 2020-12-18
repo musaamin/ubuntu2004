@@ -32,6 +32,10 @@ Sebelum mempraktikkan panduan ini, siapkan terlebih dahulu perangkat yang dibutu
 1. Code Editor: [Sublime Text](https://www.sublimetext.com/)
 1. Jaringan internet yang stabil
 
+## Daftar Isi
+
+{{% children depth="3" showhidden="true" %}}
+
 ## Penulis
 
 - Nama Penulis: Musa Amin
