@@ -9,11 +9,16 @@ pre: ""
 Nginx web server bisa menjalankan script PHP dengan menggunakan PHP-FPM.
 
 ## Install PHP-FPM
+Di Ubuntu 20.04, versi PHP yang tersedia secara default yaitu PHP 7.4. Untuk memasang PHP versi yang lain, kita harus memasang repository tambahan dari PPA. 
+
+```
+sudo add-apt-repository ppa:ondrej/php
+```
 
 Install PHP-FPM dan extension yang umumnya dibutuhkan.
 
 ```
-sudo apt install php php-fpm php-common php-cli php-mbstring php-gd php-intl php-xml php-mysql php-zip php-json
+sudo apt install php7.4 php7.4-fpm php7.4-common php7.4-cli php7.4-mbstring php7.4-gd php7.4-intl php7.4-xml php7.4-mysql php7.4-zip php7.4-json
 ```
 
 Menguji hasil install dengan mengecek versi PHP yang terpasang.

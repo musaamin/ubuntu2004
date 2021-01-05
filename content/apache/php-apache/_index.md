@@ -9,11 +9,16 @@ pre: ""
 PHP adalah salah satu bahasa pemrograman paling populer di dunia untuk membangun aplikasi web. Agar bisa menjalankan aplikasi PHP, kita harus memasang PHP engine beserta modul Apache untuk membaca PHP.
 
 ## Install PHP
+Di Ubuntu 20.04, versi PHP yang tersedia secara default yaitu PHP 7.4. Untuk memasang PHP versi yang lain, kita harus memasang repository tambahan dari PPA. 
+
+```
+sudo add-apt-repository ppa:ondrej/php
+```
 
 Install modul Apache, PHP, dan extension PHP yang sering digunakan.
 
 ```
-sudo apt install php libapache2-mod-php php-cli php-common php-mbstring php-gd php-intl php-xml php-mysql php-zip php-json
+sudo apt install php7.4 libapache2-mod-php7.4 php7.4-cli php7.4-common php7.4-mbstring php7.4-gd php7.4-intl php7.4-xml php7.4-mysql php7.4-zip php7.4-json
 ```
 
 Memverifikasi hasil instalasi PHP dengan menampilkan versi PHP.
@@ -25,10 +30,10 @@ php -v
 Hasil perintah di atas.
 
 ```
-PHP 7.4.3 (cli) (built: Oct  6 2020 15:47:56) ( NTS )
+PHP 7.4.13 (cli) (built: Nov 28 2020 06:24:59) ( NTS )
 Copyright (c) The PHP Group
 Zend Engine v3.4.0, Copyright (c) Zend Technologies
-    with Zend OPcache v7.4.3, Copyright (c), by Zend Technologies
+    with Zend OPcache v7.4.13, Copyright (c), by Zend Technologies
 
 ```
 
