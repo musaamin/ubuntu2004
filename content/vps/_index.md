@@ -49,4 +49,5 @@ Menghubungkan nama domain dengan VPS dapat dilakukan dengan melakukan konfiguras
 ### Free Credit Cloud Provider
 Dapatkan free credit dari penyedia VPS untuk akun baru:
 - [DigitalOcean](https://m.do.co/c/d33f67e6beb7) free credit $100 berlaku selama 60 hari 
+- [Vultr](https://www.vultr.com/?ref=8431287-6G) free credit $100 berlaku selama 30 hari 
 - [UpCloud](https://upcloud.com/signup/?promo=D7GW64) free credit $25 berlaku selamanya
