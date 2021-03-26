@@ -2,8 +2,8 @@
 title: "Apache Web Server"
 date: 2020-12-15T21:31:26+07:00
 draft: false
-weight: 5
-pre: "5. "
+weight: 6
+pre: "6. "
 ---
 
 Apache HTTP Server adalah aplikasi server untuk menyediakan layanan web atau berfungsi sebagai web server (HTTP server). Apache HTTP Server (httpd) terlahir pada tahun 1995 dan telah menjadi web server paling populer sejak April 1996.

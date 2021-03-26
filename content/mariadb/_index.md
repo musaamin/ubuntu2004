@@ -2,11 +2,23 @@
 title: "MariaDB Database"
 date: 2020-12-16T05:13:01+07:00
 draft: false
-weight: 8
-pre: "7. "
+weight: 5
+pre: "5. "
 ---
 
 MariaDB adalah RDBMS yang merupakan forking dari MySQL yang sekarang sudah dimiliki oleh Oracle. Sudah banyak distro Linux yang telah memasukkan MariaDB ke dalam official repository dan XAMPP pun sudah migrasi dari MySQL ke MariaDB. Website besar yang menggunakan MariaDB yaitu Wikipedia, Google, booking.com, dan Craiglist.
+
+## Memasang Repository MariaDB
+
+Secara default versi MariaDB yang tersedia di repository Ubuntu 20.04 adalah MariaDB 10.3. Untuk memasang MariaDB versi terbaru, kita harus memasang [repository MariaDB](https://downloads.mariadb.org/mariadb/repositories). 
+
+Install paket dependensi, key, dan repository MariaDB.
+
+```
+sudo apt-get install software-properties-common
+sudo apt-key adv --fetch-keys 'https://mariadb.org/mariadb_release_signing_key.asc'
+sudo add-apt-repository 'deb [arch=amd64,arm64,ppc64el] http://sgp1.mirrors.digitalocean.com/mariadb/repo/10.5/ubuntu focal main'
+``` 
 
 ## Install MariaDB
 

@@ -2,8 +2,8 @@
 title: "Composer"
 date: 2020-12-15T22:13:17+07:00
 draft: false
-weight: 7
-pre: "6. "
+weight: 8
+pre: "8. "
 ---
 
 Composer adalah package manager untuk PHP. Fungsinya mirip dengan package manager di distro Linux. Dengan Composer, jika membutuhkan script tertentu, dependensi, dan update cukup menggunakan Composer. Composer akan mengunduh script yang dibutuhkan. Beberapa PHP framework membutuhkan Composer untuk instalasi. 

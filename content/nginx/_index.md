@@ -2,8 +2,8 @@
 title: "Nginx Web Server"
 date: 2020-12-16T08:59:54+07:00
 draft: false
-weight: 12
-pre: "8. "
+weight: 8
+pre: "7. "
 ---
 
 Nginx (dibaca Egine X) adalah web server kedua yang paling banyak digunakan di internet setelah Apache. Nginx lebih hemat dalam penggunaan resource memori. Beberapa perusahaan teknologi yang menggunakan Nginx yaitu OpenDNS, CloudFlare, Adobe, BuzzFeed, ARM, dan WordPress.
