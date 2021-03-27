@@ -12,19 +12,19 @@
     <title>MariaDB Database  -  Panduan Ubuntu Server 20.04 LTS</title>
 
     
-    <link href="/ubuntu2004/css/nucleus.css?1616858275" rel="stylesheet">
-    <link href="/ubuntu2004/css/fontawesome-all.min.css?1616858275" rel="stylesheet">
-    <link href="/ubuntu2004/css/hybrid.css?1616858275" rel="stylesheet">
-    <link href="/ubuntu2004/css/featherlight.min.css?1616858275" rel="stylesheet">
-    <link href="/ubuntu2004/css/perfect-scrollbar.min.css?1616858275" rel="stylesheet">
-    <link href="/ubuntu2004/css/auto-complete.css?1616858275" rel="stylesheet">
-    <link href="/ubuntu2004/css/atom-one-dark-reasonable.css?1616858275" rel="stylesheet">
-    <link href="/ubuntu2004/css/theme.css?1616858275" rel="stylesheet">
-    <link href="/ubuntu2004/css/hugo-theme.css?1616858275" rel="stylesheet">
+    <link href="/ubuntu2004/css/nucleus.css?1616886539" rel="stylesheet">
+    <link href="/ubuntu2004/css/fontawesome-all.min.css?1616886539" rel="stylesheet">
+    <link href="/ubuntu2004/css/hybrid.css?1616886539" rel="stylesheet">
+    <link href="/ubuntu2004/css/featherlight.min.css?1616886539" rel="stylesheet">
+    <link href="/ubuntu2004/css/perfect-scrollbar.min.css?1616886539" rel="stylesheet">
+    <link href="/ubuntu2004/css/auto-complete.css?1616886539" rel="stylesheet">
+    <link href="/ubuntu2004/css/atom-one-dark-reasonable.css?1616886539" rel="stylesheet">
+    <link href="/ubuntu2004/css/theme.css?1616886539" rel="stylesheet">
+    <link href="/ubuntu2004/css/hugo-theme.css?1616886539" rel="stylesheet">
     
     
 
-    <script src="/ubuntu2004/js/jquery-3.3.1.min.js?1616858275"></script>
+    <script src="/ubuntu2004/js/jquery-3.3.1.min.js?1616886539"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -50,14 +50,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ubuntu2004/js/lunr.min.js?1616858275"></script>
-<script type="text/javascript" src="/ubuntu2004/js/auto-complete.js?1616858275"></script>
+<script type="text/javascript" src="/ubuntu2004/js/lunr.min.js?1616886539"></script>
+<script type="text/javascript" src="/ubuntu2004/js/auto-complete.js?1616886539"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/musaamin.github.io\/ubuntu2004\/";
     
 </script>
-<script type="text/javascript" src="/ubuntu2004/js/search.js?1616858275"></script>
+<script type="text/javascript" src="/ubuntu2004/js/search.js?1616886539"></script>
 
     
   </div>
@@ -704,7 +704,10 @@
 
 	<p>MariaDB adalah RDBMS yang merupakan forking dari MySQL yang sekarang sudah dimiliki oleh Oracle. Sudah banyak distro Linux yang telah memasukkan MariaDB ke dalam official repository dan XAMPP pun sudah migrasi dari MySQL ke MariaDB. Website besar yang menggunakan MariaDB yaitu Wikipedia, Google, booking.com, dan Craiglist.</p>
 <h2 id="memasang-repository-mariadb">Memasang Repository MariaDB</h2>
-<p>Secara default versi MariaDB yang tersedia di repository Ubuntu 20.04 adalah MariaDB 10.3. Untuk memasang MariaDB versi terbaru, kita harus memasang <a href="https://downloads.mariadb.org/mariadb/repositories">repository MariaDB</a>.</p>
+<p>Update dan upgrade Ubuntu terlebih dahulu, karena belum pernah dilakukan sebelumnya.</p>
+<pre><code>sudo apt update
+sudo apt upgrade -y
+</code></pre><p>Secara default versi MariaDB yang tersedia di repository Ubuntu 20.04 adalah MariaDB 10.3. Untuk memasang MariaDB versi terbaru, kita harus memasang <a href="https://downloads.mariadb.org/mariadb/repositories">repository MariaDB</a>.</p>
 <p>Install paket dependensi, key, dan repository MariaDB.</p>
 <pre><code>sudo apt-get install software-properties-common
 sudo apt-key adv --fetch-keys 'https://mariadb.org/mariadb_release_signing_key.asc'
@@ -1126,19 +1129,19 @@ exit
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ubuntu2004/js/clipboard.min.js?1616858275"></script>
-    <script src="/ubuntu2004/js/perfect-scrollbar.min.js?1616858275"></script>
-    <script src="/ubuntu2004/js/perfect-scrollbar.jquery.min.js?1616858275"></script>
-    <script src="/ubuntu2004/js/jquery.sticky.js?1616858275"></script>
-    <script src="/ubuntu2004/js/featherlight.min.js?1616858275"></script>
-    <script src="/ubuntu2004/js/highlight.pack.js?1616858275"></script>
+    <script src="/ubuntu2004/js/clipboard.min.js?1616886539"></script>
+    <script src="/ubuntu2004/js/perfect-scrollbar.min.js?1616886539"></script>
+    <script src="/ubuntu2004/js/perfect-scrollbar.jquery.min.js?1616886539"></script>
+    <script src="/ubuntu2004/js/jquery.sticky.js?1616886539"></script>
+    <script src="/ubuntu2004/js/featherlight.min.js?1616886539"></script>
+    <script src="/ubuntu2004/js/highlight.pack.js?1616886539"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ubuntu2004/js/modernizr.custom-3.6.0.js?1616858275"></script>
-    <script src="/ubuntu2004/js/learn.js?1616858275"></script>
-    <script src="/ubuntu2004/js/hugo-learn.js?1616858275"></script>
+    <script src="/ubuntu2004/js/modernizr.custom-3.6.0.js?1616886539"></script>
+    <script src="/ubuntu2004/js/learn.js?1616886539"></script>
+    <script src="/ubuntu2004/js/hugo-learn.js?1616886539"></script>
     
         
-            <script src="/ubuntu2004/mermaid/mermaid.js?1616858275"></script>
+            <script src="/ubuntu2004/mermaid/mermaid.js?1616886539"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

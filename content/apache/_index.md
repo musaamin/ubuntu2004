@@ -10,13 +10,6 @@ Apache HTTP Server adalah aplikasi server untuk menyediakan layanan web atau ber
 
 ## Install Apache
 
-Sebelum install, update dan upgrade Ubuntu terlebih dahulu, karena belum pernah dilakukan sebelumnya.
-
-```
-sudo apt update
-sudo apt upgrade -y
-```
-
 Install paket apache2 dan cek status apache2 service apakah sudah berjalan.
 
 ```

@@ -10,6 +10,13 @@ MariaDB adalah RDBMS yang merupakan forking dari MySQL yang sekarang sudah dimil
 
 ## Memasang Repository MariaDB
 
+Update dan upgrade Ubuntu terlebih dahulu, karena belum pernah dilakukan sebelumnya.
+
+```
+sudo apt update
+sudo apt upgrade -y
+```
+
 Secara default versi MariaDB yang tersedia di repository Ubuntu 20.04 adalah MariaDB 10.3. Untuk memasang MariaDB versi terbaru, kita harus memasang [repository MariaDB](https://downloads.mariadb.org/mariadb/repositories). 
 
 Install paket dependensi, key, dan repository MariaDB.
