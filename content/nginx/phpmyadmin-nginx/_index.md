@@ -19,7 +19,7 @@ wget https://files.phpmyadmin.net/phpMyAdmin/5.0.4/phpMyAdmin-5.0.4-english.tar.
 Extract filenya phpMyAdmin\*.tar.gz
 
 ```
-tar phpMyAdmin-5.0.4-english.tar.gz
+tar xzvf phpMyAdmin-5.0.4-english.tar.gz
 ```
 
 Pindahkan folder hasil extract dan buat symbolic link ke /var/www/html.
