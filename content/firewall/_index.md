@@ -110,3 +110,64 @@ iptables -F
 netfilter-persistent save
 netfilter-persistent reload
 ```
+
+## UFW
+
+UFW (Uncomplicated Firewall) adalah sebuah aplikasi yang merupakan interface dari IPTables dengan tujuan untuk memudahkan dalam konfigurasi IPTables.
+
+Install UFW.
+
+```
+sudo apt install ufw
+```
+
+Memeriksa status UFW apakah aktif atau tidak.
+
+```
+sudo ufw status
+```
+
+Mengubah default policy incoming menjadi deny
+
+```
+sudo ufw default deny incoming 
+```
+
+Mengijinkan port ssh, http, https, dan custom port 50000/tcp.
+
+```
+sudo ufw allow ssh
+sudo ufw allow http
+sudo ufw allow https
+sudo ufw allow 50000/tcp
+```
+
+Mengaktifkan UFW dan menampilkan rule-nya.
+
+```
+sudo ufw enable
+sudo ufw status
+sudo ufw status verbose
+sudo ufw status numbered
+```
+
+Jika ingin menghapus salah satu rule berdasarkan nomor urut.
+
+```
+sudo ufw delete 3
+```
+
+Jika ingin menghapus berdasarkan rule.
+
+```
+sudo ufw delete allow http
+```
+
+Jika ingin menghapus semua rule, mengembalikan default policy incoming, dan menonaktifkan UFW.
+
+```
+sudo ufw default allow incoming
+sudo ufw reset
+sudo ufw disable
+sudo ufw status
+```
