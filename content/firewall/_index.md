@@ -29,14 +29,13 @@ iptables adalah firewall berupa perangkat lunak yang secara default sudah tersed
 Install iptables-persistent, agar rules yang sudah dimasukkan ke dalam iptables tetap tersimpan meskipun server sudah direstart.
 
 ```
-sudo su
-apt install iptables-persistent
+sudo apt install iptables-persistent
 ```
 
 Menampilkan rules iptables.
 
 ```
-iptables -L
+sudo iptables -L
 ```
 
 Hasilnya jika belum ada rules.
@@ -55,13 +54,12 @@ target     prot opt source               destination
 Memasukkan rules iptables.
 
 ```
-iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
-iptables -A INPUT -i lo -j ACCEPT
-iptables -A INPUT -p icmp -j ACCEPT
-iptables -A INPUT -p tcp --dport 50000 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
-iptables -A INPUT -p tcp --dport 80 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
-iptables -A INPUT -p tcp --dport 443 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
-iptables -P INPUT DROP
+sudo iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+sudo iptables -A INPUT -p icmp -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 50000 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 80 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 443 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+sudo iptables -P INPUT DROP
 ```
 
 Rules di atas hanya mengijinkan trafik pada protokol ICMP, port 80 (HTTP), port 443 (HTTPS), dan port  50000 (Custom port SSH). Selain yang tertulis dalam rules semuanya diblokir.
@@ -69,7 +67,7 @@ Rules di atas hanya mengijinkan trafik pada protokol ICMP, port 80 (HTTP), port 
 Menampilkan kembali rules untuk melihat rules yang telah dimasukkan.
 
 ```
-iptables -L
+sudo iptables -L
 
 Chain INPUT (policy DROP)
 target     prot opt source               destination         
@@ -90,25 +88,29 @@ target     prot opt source               destination
 Save dan Reload rules iptables.
 
 ```
-netfilter-persistent save
-netfilter-persistent reload
+sudo netfilter-persistent save
+sudo netfilter-persistent reload
 ```
 
-Restart server dan cek kembali rules iptables, apakah rules yang dimasukkan sebelumnya masih ada.
+Restart server.
 
 ```
-reboot
-sudo su
-iptables -L
+sudo reboot
+```
+
+Cek kembali rules iptables, apakah rules yang dimasukkan sebelumnya masih ada.
+
+```
+sudo iptables -L
 ```
 
 Jika ingin menghapus semua rules, gunakan opsi -F, tapi sebelumnya ubah kembali policy INPUT menjadi ACCEPT karena kalau masih DROP, otomatis koneksi SSH akan terputus ketika semua rules telah dihapus.
 
 ```
-iptables -P INPUT ACCEPT
-iptables -F
-netfilter-persistent save
-netfilter-persistent reload
+sudo iptables -P INPUT ACCEPT
+sudo iptables -F
+sudo netfilter-persistent save
+sudo netfilter-persistent reload
 ```
 
 ## UFW
@@ -140,6 +142,7 @@ sudo ufw allow ssh
 sudo ufw allow http
 sudo ufw allow https
 sudo ufw allow 50000/tcp
+sudo ufw allow 12345/tcp
 ```
 
 Mengaktifkan UFW dan menampilkan rule-nya.
@@ -154,13 +157,13 @@ sudo ufw status numbered
 Jika ingin menghapus salah satu rule berdasarkan nomor urut.
 
 ```
-sudo ufw delete 3
+sudo ufw delete 5
 ```
 
 Jika ingin menghapus berdasarkan rule.
 
 ```
-sudo ufw delete allow http
+sudo ufw delete allow 12345/tcp
 ```
 
 Jika ingin menghapus semua rule, mengembalikan default policy incoming, dan menonaktifkan UFW.

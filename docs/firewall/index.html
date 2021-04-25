@@ -12,19 +12,20 @@
     <title>Firewall  -  Panduan Ubuntu Server 20.04 LTS</title>
 
     
-    <link href="/ubuntu2004/css/nucleus.css?1619065715" rel="stylesheet">
-    <link href="/ubuntu2004/css/fontawesome-all.min.css?1619065715" rel="stylesheet">
-    <link href="/ubuntu2004/css/hybrid.css?1619065715" rel="stylesheet">
-    <link href="/ubuntu2004/css/featherlight.min.css?1619065715" rel="stylesheet">
-    <link href="/ubuntu2004/css/perfect-scrollbar.min.css?1619065715" rel="stylesheet">
-    <link href="/ubuntu2004/css/auto-complete.css?1619065715" rel="stylesheet">
-    <link href="/ubuntu2004/css/atom-one-dark-reasonable.css?1619065715" rel="stylesheet">
-    <link href="/ubuntu2004/css/theme.css?1619065715" rel="stylesheet">
-    <link href="/ubuntu2004/css/hugo-theme.css?1619065715" rel="stylesheet">
+    <link href="/ubuntu2004/css/nucleus.css?1619344380" rel="stylesheet">
+    <link href="/ubuntu2004/css/fontawesome-all.min.css?1619344380" rel="stylesheet">
+    <link href="/ubuntu2004/css/hybrid.css?1619344380" rel="stylesheet">
+    <link href="/ubuntu2004/css/featherlight.min.css?1619344380" rel="stylesheet">
+    <link href="/ubuntu2004/css/perfect-scrollbar.min.css?1619344380" rel="stylesheet">
+    <link href="/ubuntu2004/css/auto-complete.css?1619344380" rel="stylesheet">
+    <link href="/ubuntu2004/css/atom-one-dark-reasonable.css?1619344380" rel="stylesheet">
+    <link href="/ubuntu2004/css/theme.css?1619344380" rel="stylesheet">
+    <link href="/ubuntu2004/css/tabs.css?1619344380" rel="stylesheet">
+    <link href="/ubuntu2004/css/hugo-theme.css?1619344380" rel="stylesheet">
     
     
 
-    <script src="/ubuntu2004/js/jquery-3.3.1.min.js?1619065715"></script>
+    <script src="/ubuntu2004/js/jquery-3.3.1.min.js?1619344380"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -50,14 +51,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ubuntu2004/js/lunr.min.js?1619065715"></script>
-<script type="text/javascript" src="/ubuntu2004/js/auto-complete.js?1619065715"></script>
+<script type="text/javascript" src="/ubuntu2004/js/lunr.min.js?1619344380"></script>
+<script type="text/javascript" src="/ubuntu2004/js/auto-complete.js?1619344380"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/musaamin.github.io\/ubuntu2004\/";
     
 </script>
-<script type="text/javascript" src="/ubuntu2004/js/search.js?1619065715"></script>
+<script type="text/javascript" src="/ubuntu2004/js/search.js?1619344380"></script>
 
     
   </div>
@@ -712,10 +713,9 @@
 <h2 id="iptables">IPTables</h2>
 <p>iptables adalah firewall berupa perangkat lunak yang secara default sudah tersedia pada sistem operasi berbasis Linux.</p>
 <p>Install iptables-persistent, agar rules yang sudah dimasukkan ke dalam iptables tetap tersimpan meskipun server sudah direstart.</p>
-<pre><code>sudo su
-apt install iptables-persistent
+<pre><code>sudo apt install iptables-persistent
 </code></pre><p>Menampilkan rules iptables.</p>
-<pre><code>iptables -L
+<pre><code>sudo iptables -L
 </code></pre><p>Hasilnya jika belum ada rules.</p>
 <pre><code>Chain INPUT (policy ACCEPT)
 target     prot opt source               destination         
@@ -726,16 +726,15 @@ target     prot opt source               destination
 Chain OUTPUT (policy ACCEPT)
 target     prot opt source               destination 
 </code></pre><p>Memasukkan rules iptables.</p>
-<pre><code>iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
-iptables -A INPUT -i lo -j ACCEPT
-iptables -A INPUT -p icmp -j ACCEPT
-iptables -A INPUT -p tcp --dport 50000 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
-iptables -A INPUT -p tcp --dport 80 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
-iptables -A INPUT -p tcp --dport 443 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
-iptables -P INPUT DROP
+<pre><code>sudo iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+sudo iptables -A INPUT -p icmp -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 50000 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 80 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 443 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+sudo iptables -P INPUT DROP
 </code></pre><p>Rules di atas hanya mengijinkan trafik pada protokol ICMP, port 80 (HTTP), port 443 (HTTPS), dan port  50000 (Custom port SSH). Selain yang tertulis dalam rules semuanya diblokir.</p>
 <p>Menampilkan kembali rules untuk melihat rules yang telah dimasukkan.</p>
-<pre><code>iptables -L
+<pre><code>sudo iptables -L
 
 Chain INPUT (policy DROP)
 target     prot opt source               destination         
@@ -752,17 +751,17 @@ target     prot opt source               destination
 Chain OUTPUT (policy ACCEPT)
 target     prot opt source               destination
 </code></pre><p>Save dan Reload rules iptables.</p>
-<pre><code>netfilter-persistent save
-netfilter-persistent reload
-</code></pre><p>Restart server dan cek kembali rules iptables, apakah rules yang dimasukkan sebelumnya masih ada.</p>
-<pre><code>reboot
-sudo su
-iptables -L
+<pre><code>sudo netfilter-persistent save
+sudo netfilter-persistent reload
+</code></pre><p>Restart server.</p>
+<pre><code>sudo reboot
+</code></pre><p>Cek kembali rules iptables, apakah rules yang dimasukkan sebelumnya masih ada.</p>
+<pre><code>sudo iptables -L
 </code></pre><p>Jika ingin menghapus semua rules, gunakan opsi -F, tapi sebelumnya ubah kembali policy INPUT menjadi ACCEPT karena kalau masih DROP, otomatis koneksi SSH akan terputus ketika semua rules telah dihapus.</p>
-<pre><code>iptables -P INPUT ACCEPT
-iptables -F
-netfilter-persistent save
-netfilter-persistent reload
+<pre><code>sudo iptables -P INPUT ACCEPT
+sudo iptables -F
+sudo netfilter-persistent save
+sudo netfilter-persistent reload
 </code></pre><h2 id="ufw">UFW</h2>
 <p>UFW (Uncomplicated Firewall) adalah sebuah aplikasi yang merupakan interface dari IPTables dengan tujuan untuk memudahkan dalam konfigurasi IPTables.</p>
 <p>Install UFW.</p>
@@ -776,15 +775,16 @@ netfilter-persistent reload
 sudo ufw allow http
 sudo ufw allow https
 sudo ufw allow 50000/tcp
+sudo ufw allow 12345/tcp
 </code></pre><p>Mengaktifkan UFW dan menampilkan rule-nya.</p>
 <pre><code>sudo ufw enable
 sudo ufw status
 sudo ufw status verbose
 sudo ufw status numbered
 </code></pre><p>Jika ingin menghapus salah satu rule berdasarkan nomor urut.</p>
-<pre><code>sudo ufw delete 3
+<pre><code>sudo ufw delete 5
 </code></pre><p>Jika ingin menghapus berdasarkan rule.</p>
-<pre><code>sudo ufw delete allow http
+<pre><code>sudo ufw delete allow 12345/tcp
 </code></pre><p>Jika ingin menghapus semua rule, mengembalikan default policy incoming, dan menonaktifkan UFW.</p>
 <pre><code>sudo ufw default allow incoming
 sudo ufw reset
@@ -1178,19 +1178,19 @@ sudo ufw status
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ubuntu2004/js/clipboard.min.js?1619065715"></script>
-    <script src="/ubuntu2004/js/perfect-scrollbar.min.js?1619065715"></script>
-    <script src="/ubuntu2004/js/perfect-scrollbar.jquery.min.js?1619065715"></script>
-    <script src="/ubuntu2004/js/jquery.sticky.js?1619065715"></script>
-    <script src="/ubuntu2004/js/featherlight.min.js?1619065715"></script>
-    <script src="/ubuntu2004/js/highlight.pack.js?1619065715"></script>
+    <script src="/ubuntu2004/js/clipboard.min.js?1619344380"></script>
+    <script src="/ubuntu2004/js/perfect-scrollbar.min.js?1619344380"></script>
+    <script src="/ubuntu2004/js/perfect-scrollbar.jquery.min.js?1619344380"></script>
+    <script src="/ubuntu2004/js/jquery.sticky.js?1619344380"></script>
+    <script src="/ubuntu2004/js/featherlight.min.js?1619344380"></script>
+    <script src="/ubuntu2004/js/highlight.pack.js?1619344380"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ubuntu2004/js/modernizr.custom-3.6.0.js?1619065715"></script>
-    <script src="/ubuntu2004/js/learn.js?1619065715"></script>
-    <script src="/ubuntu2004/js/hugo-learn.js?1619065715"></script>
+    <script src="/ubuntu2004/js/modernizr.custom-3.6.0.js?1619344380"></script>
+    <script src="/ubuntu2004/js/learn.js?1619344380"></script>
+    <script src="/ubuntu2004/js/hugo-learn.js?1619344380"></script>
     
         
-            <script src="/ubuntu2004/mermaid/mermaid.js?1619065715"></script>
+            <script src="/ubuntu2004/mermaid/mermaid.js?1619344380"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
