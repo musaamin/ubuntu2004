@@ -154,13 +154,32 @@ sudo ufw status verbose
 sudo ufw status numbered
 ```
 
-Jika ingin menghapus salah satu rule berdasarkan nomor urut.
+Hasil **ufw status numbered**
+
+```
+Status: active
+
+     To                         Action      From
+     --                         ------      ----
+[ 1] 22/tcp                     ALLOW IN    Anywhere                  
+[ 2] 80/tcp                     ALLOW IN    Anywhere                  
+[ 3] 443/tcp                    ALLOW IN    Anywhere                  
+[ 4] 50000/tcp                  ALLOW IN    Anywhere                  
+[ 5] 12345/tcp                  ALLOW IN    Anywhere                  
+[ 6] 22/tcp (v6)                ALLOW IN    Anywhere (v6)             
+[ 7] 80/tcp (v6)                ALLOW IN    Anywhere (v6)             
+[ 8] 443/tcp (v6)               ALLOW IN    Anywhere (v6)             
+[ 9] 50000/tcp (v6)             ALLOW IN    Anywhere (v6)             
+[10] 12345/tcp (v6)             ALLOW IN    Anywhere (v6)
+```
+
+Menghapus salah satu rule berdasarkan nomor urut.
 
 ```
 sudo ufw delete 5
 ```
 
-Jika ingin menghapus berdasarkan rule.
+Menghapus berdasarkan rule, akan menghapus rule v4 dan v6.
 
 ```
 sudo ufw delete allow 12345/tcp
