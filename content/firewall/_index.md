@@ -129,12 +129,6 @@ Memeriksa status UFW apakah aktif atau tidak.
 sudo ufw status
 ```
 
-Mengubah default policy incoming menjadi deny
-
-```
-sudo ufw default deny incoming 
-```
-
 Mengijinkan port ssh, http, https, dan custom port 50000/tcp.
 
 ```
@@ -143,6 +137,12 @@ sudo ufw allow http
 sudo ufw allow https
 sudo ufw allow 50000/tcp
 sudo ufw allow 12345/tcp
+```
+
+Mengubah default policy incoming menjadi deny
+
+```
+sudo ufw default deny incoming 
 ```
 
 Mengaktifkan UFW dan menampilkan rule-nya.

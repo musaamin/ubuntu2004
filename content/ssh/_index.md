@@ -40,7 +40,7 @@ Buka file konfigurasi SSH server
 nano /etc/ssh/sshd_config
 ```
 
-Cari baris opsi #Port 22, lepas tanda # (komentar), dan ganti nomor 22 ke 5000.
+Cari baris opsi #Port 22, lepas tanda # (komentar), dan ganti nomor 22 ke 50000.
 
 ```
 Port 50000
