@@ -104,10 +104,11 @@ Cek kembali rules iptables, apakah rules yang dimasukkan sebelumnya masih ada.
 sudo iptables -L
 ```
 
-Jika ingin menghapus semua rules, gunakan opsi -F, tapi sebelumnya ubah kembali policy INPUT menjadi ACCEPT karena kalau masih DROP, otomatis koneksi SSH akan terputus ketika semua rules telah dihapus.
+Jika ingin menghapus semua rules, gunakan opsi -F, tapi sebelumnya ubah kembali policy INPUT menjadi ACCEPT karena kalau masih DROP koneksi SSH akan terputus ketika semua rules telah terhapus.
 
 ```
 sudo iptables -P INPUT ACCEPT
+sudo iptables -P FORWARD ACCEPT
 sudo iptables -F
 sudo netfilter-persistent save
 sudo netfilter-persistent reload
