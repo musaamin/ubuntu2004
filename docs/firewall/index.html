@@ -12,20 +12,20 @@
     <title>Firewall  -  Panduan Ubuntu Server 20.04 LTS</title>
 
     
-    <link href="/ubuntu2004/css/nucleus.css?1622972362" rel="stylesheet">
-    <link href="/ubuntu2004/css/fontawesome-all.min.css?1622972362" rel="stylesheet">
-    <link href="/ubuntu2004/css/hybrid.css?1622972362" rel="stylesheet">
-    <link href="/ubuntu2004/css/featherlight.min.css?1622972362" rel="stylesheet">
-    <link href="/ubuntu2004/css/perfect-scrollbar.min.css?1622972362" rel="stylesheet">
-    <link href="/ubuntu2004/css/auto-complete.css?1622972362" rel="stylesheet">
-    <link href="/ubuntu2004/css/atom-one-dark-reasonable.css?1622972362" rel="stylesheet">
-    <link href="/ubuntu2004/css/theme.css?1622972362" rel="stylesheet">
-    <link href="/ubuntu2004/css/tabs.css?1622972362" rel="stylesheet">
-    <link href="/ubuntu2004/css/hugo-theme.css?1622972362" rel="stylesheet">
+    <link href="/ubuntu2004/css/nucleus.css?1623413751" rel="stylesheet">
+    <link href="/ubuntu2004/css/fontawesome-all.min.css?1623413751" rel="stylesheet">
+    <link href="/ubuntu2004/css/hybrid.css?1623413751" rel="stylesheet">
+    <link href="/ubuntu2004/css/featherlight.min.css?1623413751" rel="stylesheet">
+    <link href="/ubuntu2004/css/perfect-scrollbar.min.css?1623413751" rel="stylesheet">
+    <link href="/ubuntu2004/css/auto-complete.css?1623413751" rel="stylesheet">
+    <link href="/ubuntu2004/css/atom-one-dark-reasonable.css?1623413751" rel="stylesheet">
+    <link href="/ubuntu2004/css/theme.css?1623413751" rel="stylesheet">
+    <link href="/ubuntu2004/css/tabs.css?1623413751" rel="stylesheet">
+    <link href="/ubuntu2004/css/hugo-theme.css?1623413751" rel="stylesheet">
     
     
 
-    <script src="/ubuntu2004/js/jquery-3.3.1.min.js?1622972362"></script>
+    <script src="/ubuntu2004/js/jquery-3.3.1.min.js?1623413751"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -51,14 +51,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ubuntu2004/js/lunr.min.js?1622972362"></script>
-<script type="text/javascript" src="/ubuntu2004/js/auto-complete.js?1622972362"></script>
+<script type="text/javascript" src="/ubuntu2004/js/lunr.min.js?1623413751"></script>
+<script type="text/javascript" src="/ubuntu2004/js/auto-complete.js?1623413751"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/musaamin.github.io\/ubuntu2004\/";
     
 </script>
-<script type="text/javascript" src="/ubuntu2004/js/search.js?1622972362"></script>
+<script type="text/javascript" src="/ubuntu2004/js/search.js?1623413751"></script>
 
     
   </div>
@@ -728,10 +728,11 @@ target     prot opt source               destination
 </code></pre><p>Memasukkan rules iptables.</p>
 <pre><code>sudo iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
 sudo iptables -A INPUT -p icmp -j ACCEPT
-sudo iptables -A INPUT -p tcp --dport 50000 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
-sudo iptables -A INPUT -p tcp --dport 80 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
-sudo iptables -A INPUT -p tcp --dport 443 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 50000 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT
 sudo iptables -P INPUT DROP
+sudo iptables -P FORWARD DROP
 </code></pre><p>Rules di atas hanya mengijinkan trafik pada protokol ICMP, port 80 (HTTP), port 443 (HTTPS), dan port  50000 (Custom port SSH). Selain yang tertulis dalam rules semuanya diblokir.</p>
 <p>Menampilkan kembali rules untuk melihat rules yang telah dimasukkan.</p>
 <pre><code>sudo iptables -L
@@ -739,13 +740,12 @@ sudo iptables -P INPUT DROP
 Chain INPUT (policy DROP)
 target     prot opt source               destination         
 ACCEPT     all  --  anywhere             anywhere             ctstate RELATED,ESTABLISHED
-ACCEPT     all  --  anywhere             anywhere            
 ACCEPT     icmp --  anywhere             anywhere            
-ACCEPT     tcp  --  anywhere             anywhere             tcp dpt:50000 ctstate NEW,ESTABLISHED
-ACCEPT     tcp  --  anywhere             anywhere             tcp dpt:http ctstate NEW,ESTABLISHED
-ACCEPT     tcp  --  anywhere             anywhere             tcp dpt:https ctstate NEW,ESTABLISHED
+ACCEPT     tcp  --  anywhere             anywhere             tcp dpt:50000
+ACCEPT     tcp  --  anywhere             anywhere             tcp dpt:http
+ACCEPT     tcp  --  anywhere             anywhere             tcp dpt:https
 
-Chain FORWARD (policy ACCEPT)
+Chain FORWARD (policy DROP)
 target     prot opt source               destination         
 
 Chain OUTPUT (policy ACCEPT)
@@ -1193,19 +1193,19 @@ sudo ufw status
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ubuntu2004/js/clipboard.min.js?1622972362"></script>
-    <script src="/ubuntu2004/js/perfect-scrollbar.min.js?1622972362"></script>
-    <script src="/ubuntu2004/js/perfect-scrollbar.jquery.min.js?1622972362"></script>
-    <script src="/ubuntu2004/js/jquery.sticky.js?1622972362"></script>
-    <script src="/ubuntu2004/js/featherlight.min.js?1622972362"></script>
-    <script src="/ubuntu2004/js/highlight.pack.js?1622972362"></script>
+    <script src="/ubuntu2004/js/clipboard.min.js?1623413751"></script>
+    <script src="/ubuntu2004/js/perfect-scrollbar.min.js?1623413751"></script>
+    <script src="/ubuntu2004/js/perfect-scrollbar.jquery.min.js?1623413751"></script>
+    <script src="/ubuntu2004/js/jquery.sticky.js?1623413751"></script>
+    <script src="/ubuntu2004/js/featherlight.min.js?1623413751"></script>
+    <script src="/ubuntu2004/js/highlight.pack.js?1623413751"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ubuntu2004/js/modernizr.custom-3.6.0.js?1622972362"></script>
-    <script src="/ubuntu2004/js/learn.js?1622972362"></script>
-    <script src="/ubuntu2004/js/hugo-learn.js?1622972362"></script>
+    <script src="/ubuntu2004/js/modernizr.custom-3.6.0.js?1623413751"></script>
+    <script src="/ubuntu2004/js/learn.js?1623413751"></script>
+    <script src="/ubuntu2004/js/hugo-learn.js?1623413751"></script>
     
         
-            <script src="/ubuntu2004/mermaid/mermaid.js?1622972362"></script>
+            <script src="/ubuntu2004/mermaid/mermaid.js?1623413751"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

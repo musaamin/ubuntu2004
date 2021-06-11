@@ -56,10 +56,11 @@ Memasukkan rules iptables.
 ```
 sudo iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
 sudo iptables -A INPUT -p icmp -j ACCEPT
-sudo iptables -A INPUT -p tcp --dport 50000 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
-sudo iptables -A INPUT -p tcp --dport 80 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
-sudo iptables -A INPUT -p tcp --dport 443 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 50000 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT
 sudo iptables -P INPUT DROP
+sudo iptables -P FORWARD DROP
 ```
 
 Rules di atas hanya mengijinkan trafik pada protokol ICMP, port 80 (HTTP), port 443 (HTTPS), dan port  50000 (Custom port SSH). Selain yang tertulis dalam rules semuanya diblokir.
@@ -72,13 +73,12 @@ sudo iptables -L
 Chain INPUT (policy DROP)
 target     prot opt source               destination         
 ACCEPT     all  --  anywhere             anywhere             ctstate RELATED,ESTABLISHED
-ACCEPT     all  --  anywhere             anywhere            
 ACCEPT     icmp --  anywhere             anywhere            
-ACCEPT     tcp  --  anywhere             anywhere             tcp dpt:50000 ctstate NEW,ESTABLISHED
-ACCEPT     tcp  --  anywhere             anywhere             tcp dpt:http ctstate NEW,ESTABLISHED
-ACCEPT     tcp  --  anywhere             anywhere             tcp dpt:https ctstate NEW,ESTABLISHED
+ACCEPT     tcp  --  anywhere             anywhere             tcp dpt:50000
+ACCEPT     tcp  --  anywhere             anywhere             tcp dpt:http
+ACCEPT     tcp  --  anywhere             anywhere             tcp dpt:https
 
-Chain FORWARD (policy ACCEPT)
+Chain FORWARD (policy DROP)
 target     prot opt source               destination         
 
 Chain OUTPUT (policy ACCEPT)
