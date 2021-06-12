@@ -1,7 +1,8 @@
 baseURL = "https://musaamin.github.io/ubuntu2004/"
 publishDir = "docs"
 title = "Panduan Ubuntu Server 20.04 LTS"
-theme = "learn" 
+theme = "learn"
+googleAnalytics = "G-TQH1QQSK23"
 
 [params]
  author = "Musa Amin"
