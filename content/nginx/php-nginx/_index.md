@@ -96,7 +96,7 @@ Pengujian dilakukan dengan membuat file .php yang berisi fungsi phpinfo() untuk 
 Membuat file info.php.
 
 ```
-nano /var/www/domain.com/info.php
+sudo nano /var/www/domain.com/info.php
 ```
 
 Masukkan script PHP di bawah ini.

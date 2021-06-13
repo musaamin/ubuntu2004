@@ -40,8 +40,8 @@ Masukkan teks ke dalam file test.html.
 Mengubah permission dan ownership folder document root.
 
 ```
-sudo chown -R $USER:www-data domain.com
-sudo chmod -R 775 domain.com
+sudo chown -R www-data:www-data domain.com
+sudo chmod -R 755 domain.com
 ```
 
 Membuat file konfigurasi server block untuk domain.com.

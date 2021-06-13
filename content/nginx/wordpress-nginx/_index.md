@@ -33,8 +33,8 @@ sudo cp -Rv wordpress/* /var/www/domain.com
 Mengubah ownership dan permission folder domain.com.
 
 ```
-sudo chown -R $USER:www-data /var/www/domain.com
-sudo chmod -R 775 /var/www/domain.com
+sudo chown -R www-data:www-data /var/www/domain.com
+sudo chmod -R 755 /var/www/domain.com
 ```
 
 Browse http://domain.com untuk install WordPress.
