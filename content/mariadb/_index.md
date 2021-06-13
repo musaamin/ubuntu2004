@@ -48,7 +48,7 @@ Lalu jawab pertanyaan yang diajukan seperti di bawah ini.
 
 ```
 Enter current password for root (enter for none): ENTER
-Switch to unix_socket authentication [Y/n] n
+Switch to unix_socket authentication [Y/n] y
 Change the root password? [Y/n] y
 Remove anonymous users? [Y/n] y
 Disallow root login remotely? [Y/n] y
@@ -83,4 +83,3 @@ mysql -u wordpress -p
 SHOW DATABASES;
 exit
 ```
-
