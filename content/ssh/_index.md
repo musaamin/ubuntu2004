@@ -53,6 +53,14 @@ systemctl restart ssh
 systemctl status ssh
 ```
 
+Untuk remote SSH di Xshell jangan lupa ubah Port Number menjadi 50000.
+
+Sementara di Linux, tambahkan parameter -p untuk custom port SSH.
+
+```
+ssh root@64.20.51.164 -p 50000
+```
+
 **Disable root Login**
 
 Menonaktifkan login SSH dengan user root. Langkah pertama yang harus dilakukan yaitu membuat user baru, diberikan hak ases root.
@@ -72,7 +80,7 @@ PermitRootLogin no
 
 Login SSH dengan key lebih aman dibandingkan login menggunakan password.
 
-Membuat SSH Key di Xshell
+**Membuat SSH Key di Xshell**
 1. Tools → User Key Manager.
 1. Generate.
 1. Next.
@@ -82,7 +90,7 @@ Membuat SSH Key di Xshell
 1. Buka Properties Key.
 1. Copy Public Key yang ditampilkan.
 
-Memasukkan Public Key dari Windows ke Server
+**Memasukkan Public Key dari Windows ke Server**
 1. Login SSH ke VPS.
 1. Buat folder .ssh di dalam direktori home jika belum ada.
 1. Masuk ke folder .ssh.
@@ -97,13 +105,13 @@ nano authorized_keys
 chmod 600 authorized_keys
 ```
 
-Login SSH dengan Key di Xshell
+**Login SSH dengan Key di Xshell**
 1. Buka Properties dari Session.
 1. Klik menu Connection → Authentication.
 1. Pilih Method = Public Key, Username = root, User Key = nama key yang sudah dibuat sebelumnya.
 1. Klik Connect.
 
-Membuat SSH Key di Linux
+**Membuat SSH Key di Linux**
 1. Jalankan perintah ssh-key untuk generate SSH key.
 1. Berikan nama file lengkap dengan path direktori penyimpanan. 
 1. Misal namanya key-server, tercipta 2 file yaitu key-server berisi Private Key dan key-server.pub berisi Public Key.
@@ -114,7 +122,7 @@ Generating public/private rsa key pair.
 Enter file in which to save the key (/home/musa/.ssh/id_rsa): /home/musa/.ssh/key-server 
 ```
 
-Memasukkan Public Key dari Linux ke Server
+**Memasukkan Public Key dari Linux ke Server**
 
 Mengirim SSH key ke VPS dengan memakai perintah ssh-copy-id.
 
@@ -122,17 +130,16 @@ Mengirim SSH key ke VPS dengan memakai perintah ssh-copy-id.
 ssh-copy-id -i ~/.ssh/key-server root@64.20.51.164 -p 50000
 ```
 
-Mengaktifkan Login SSH dengan Key
+**Mengaktifkan Login SSH dengan Key**
 
 Buka kembali file konfigurasi SSH dan sesuaikan dengan opsi di bawah ini.
 
 ```
 PubkeyAuthentication yes	
 PasswordAuthentication no 
-PermitEmptyPasswords no
 ```
 
-Koneksi SSH client dengan file config di Linux
+**Koneksi SSH client dengan file config di Linux**
 
 Membuat file konfigurasi agar lebih mudah melakukan koneksi SSH tanpa harus mengetikkan perintah yang cukup panjang.
 

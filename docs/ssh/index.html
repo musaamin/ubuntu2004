@@ -12,20 +12,20 @@
     <title>Secure Shell (SSH)  -  Panduan Ubuntu Server 20.04 LTS</title>
 
     
-    <link href="/ubuntu2004/css/nucleus.css?1623654804" rel="stylesheet">
-    <link href="/ubuntu2004/css/fontawesome-all.min.css?1623654804" rel="stylesheet">
-    <link href="/ubuntu2004/css/hybrid.css?1623654804" rel="stylesheet">
-    <link href="/ubuntu2004/css/featherlight.min.css?1623654804" rel="stylesheet">
-    <link href="/ubuntu2004/css/perfect-scrollbar.min.css?1623654804" rel="stylesheet">
-    <link href="/ubuntu2004/css/auto-complete.css?1623654804" rel="stylesheet">
-    <link href="/ubuntu2004/css/atom-one-dark-reasonable.css?1623654804" rel="stylesheet">
-    <link href="/ubuntu2004/css/theme.css?1623654804" rel="stylesheet">
-    <link href="/ubuntu2004/css/tabs.css?1623654804" rel="stylesheet">
-    <link href="/ubuntu2004/css/hugo-theme.css?1623654804" rel="stylesheet">
+    <link href="/ubuntu2004/css/nucleus.css?1623739968" rel="stylesheet">
+    <link href="/ubuntu2004/css/fontawesome-all.min.css?1623739968" rel="stylesheet">
+    <link href="/ubuntu2004/css/hybrid.css?1623739968" rel="stylesheet">
+    <link href="/ubuntu2004/css/featherlight.min.css?1623739968" rel="stylesheet">
+    <link href="/ubuntu2004/css/perfect-scrollbar.min.css?1623739968" rel="stylesheet">
+    <link href="/ubuntu2004/css/auto-complete.css?1623739968" rel="stylesheet">
+    <link href="/ubuntu2004/css/atom-one-dark-reasonable.css?1623739968" rel="stylesheet">
+    <link href="/ubuntu2004/css/theme.css?1623739968" rel="stylesheet">
+    <link href="/ubuntu2004/css/tabs.css?1623739968" rel="stylesheet">
+    <link href="/ubuntu2004/css/hugo-theme.css?1623739968" rel="stylesheet">
     
     
 
-    <script src="/ubuntu2004/js/jquery-3.3.1.min.js?1623654804"></script>
+    <script src="/ubuntu2004/js/jquery-3.3.1.min.js?1623739968"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -51,14 +51,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ubuntu2004/js/lunr.min.js?1623654804"></script>
-<script type="text/javascript" src="/ubuntu2004/js/auto-complete.js?1623654804"></script>
+<script type="text/javascript" src="/ubuntu2004/js/lunr.min.js?1623739968"></script>
+<script type="text/javascript" src="/ubuntu2004/js/auto-complete.js?1623739968"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/musaamin.github.io\/ubuntu2004\/";
     
 </script>
-<script type="text/javascript" src="/ubuntu2004/js/search.js?1623654804"></script>
+<script type="text/javascript" src="/ubuntu2004/js/search.js?1623739968"></script>
 
     
   </div>
@@ -730,6 +730,9 @@
 </code></pre><p>Lalu restart SSH service.</p>
 <pre><code>systemctl restart ssh
 systemctl status ssh
+</code></pre><p>Untuk remote SSH di Xshell jangan lupa ubah Port Number menjadi 50000.</p>
+<p>Sementara di Linux, tambahkan parameter -p untuk custom port SSH.</p>
+<pre><code>ssh root@64.20.51.164 -p 50000
 </code></pre><p><strong>Disable root Login</strong></p>
 <p>Menonaktifkan login SSH dengan user root. Langkah pertama yang harus dilakukan yaitu membuat user baru, diberikan hak ases root.</p>
 <pre><code>adduser musa 
@@ -738,7 +741,7 @@ usermod -aG sudo musa
 <pre><code>PermitRootLogin no
 </code></pre><p><strong>Login SSH Memakai Key</strong></p>
 <p>Login SSH dengan key lebih aman dibandingkan login menggunakan password.</p>
-<p>Membuat SSH Key di Xshell</p>
+<p><strong>Membuat SSH Key di Xshell</strong></p>
 <ol>
 <li>Tools → User Key Manager.</li>
 <li>Generate.</li>
@@ -749,7 +752,7 @@ usermod -aG sudo musa
 <li>Buka Properties Key.</li>
 <li>Copy Public Key yang ditampilkan.</li>
 </ol>
-<p>Memasukkan Public Key dari Windows ke Server</p>
+<p><strong>Memasukkan Public Key dari Windows ke Server</strong></p>
 <ol>
 <li>Login SSH ke VPS.</li>
 <li>Buat folder .ssh di dalam direktori home jika belum ada.</li>
@@ -762,14 +765,14 @@ chmod 700 ~/.ssh
 cd ~/.ssh
 nano authorized_keys
 chmod 600 authorized_keys
-</code></pre><p>Login SSH dengan Key di Xshell</p>
+</code></pre><p><strong>Login SSH dengan Key di Xshell</strong></p>
 <ol>
 <li>Buka Properties dari Session.</li>
 <li>Klik menu Connection → Authentication.</li>
 <li>Pilih Method = Public Key, Username = root, User Key = nama key yang sudah dibuat sebelumnya.</li>
 <li>Klik Connect.</li>
 </ol>
-<p>Membuat SSH Key di Linux</p>
+<p><strong>Membuat SSH Key di Linux</strong></p>
 <ol>
 <li>Jalankan perintah ssh-key untuk generate SSH key.</li>
 <li>Berikan nama file lengkap dengan path direktori penyimpanan.</li>
@@ -778,15 +781,14 @@ chmod 600 authorized_keys
 <pre><code>ssh-keygen
 Generating public/private rsa key pair.
 Enter file in which to save the key (/home/musa/.ssh/id_rsa): /home/musa/.ssh/key-server 
-</code></pre><p>Memasukkan Public Key dari Linux ke Server</p>
+</code></pre><p><strong>Memasukkan Public Key dari Linux ke Server</strong></p>
 <p>Mengirim SSH key ke VPS dengan memakai perintah ssh-copy-id.</p>
 <pre><code>ssh-copy-id -i ~/.ssh/key-server root@64.20.51.164 -p 50000
-</code></pre><p>Mengaktifkan Login SSH dengan Key</p>
+</code></pre><p><strong>Mengaktifkan Login SSH dengan Key</strong></p>
 <p>Buka kembali file konfigurasi SSH dan sesuaikan dengan opsi di bawah ini.</p>
 <pre><code>PubkeyAuthentication yes	
 PasswordAuthentication no 
-PermitEmptyPasswords no
-</code></pre><p>Koneksi SSH client dengan file config di Linux</p>
+</code></pre><p><strong>Koneksi SSH client dengan file config di Linux</strong></p>
 <p>Membuat file konfigurasi agar lebih mudah melakukan koneksi SSH tanpa harus mengetikkan perintah yang cukup panjang.</p>
 <p>Membuat file config dengan nano text editor.</p>
 <pre><code>nano ~/.ssh/config
@@ -1187,19 +1189,19 @@ HostName 64.20.51.164
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ubuntu2004/js/clipboard.min.js?1623654804"></script>
-    <script src="/ubuntu2004/js/perfect-scrollbar.min.js?1623654804"></script>
-    <script src="/ubuntu2004/js/perfect-scrollbar.jquery.min.js?1623654804"></script>
-    <script src="/ubuntu2004/js/jquery.sticky.js?1623654804"></script>
-    <script src="/ubuntu2004/js/featherlight.min.js?1623654804"></script>
-    <script src="/ubuntu2004/js/highlight.pack.js?1623654804"></script>
+    <script src="/ubuntu2004/js/clipboard.min.js?1623739968"></script>
+    <script src="/ubuntu2004/js/perfect-scrollbar.min.js?1623739968"></script>
+    <script src="/ubuntu2004/js/perfect-scrollbar.jquery.min.js?1623739968"></script>
+    <script src="/ubuntu2004/js/jquery.sticky.js?1623739968"></script>
+    <script src="/ubuntu2004/js/featherlight.min.js?1623739968"></script>
+    <script src="/ubuntu2004/js/highlight.pack.js?1623739968"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ubuntu2004/js/modernizr.custom-3.6.0.js?1623654804"></script>
-    <script src="/ubuntu2004/js/learn.js?1623654804"></script>
-    <script src="/ubuntu2004/js/hugo-learn.js?1623654804"></script>
+    <script src="/ubuntu2004/js/modernizr.custom-3.6.0.js?1623739968"></script>
+    <script src="/ubuntu2004/js/learn.js?1623739968"></script>
+    <script src="/ubuntu2004/js/hugo-learn.js?1623739968"></script>
     
         
-            <script src="/ubuntu2004/mermaid/mermaid.js?1623654804"></script>
+            <script src="/ubuntu2004/mermaid/mermaid.js?1623739968"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
