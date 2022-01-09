@@ -1,0 +1,313 @@
+<!doctype html><html lang=en class="js csstransforms3d">
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=generator content="Hugo 0.91.2">
+<meta name=description content="Panduan Ubuntu Server 20.04 LTS">
+<meta name=author content="Musa Amin">
+<link rel="shortcut icon" href=https://raw.githubusercontent.com/musaamin/ubuntu2004/main/static/images/favicon.png type=image/x-icon>
+<title>System Monitoring - Panduan Ubuntu Server 20.04 LTS</title>
+<link href=/ubuntu2004/css/nucleus.css?1641708579 rel=stylesheet>
+<link href=/ubuntu2004/css/fontawesome-all.min.css?1641708579 rel=stylesheet>
+<link href=/ubuntu2004/css/hybrid.css?1641708579 rel=stylesheet>
+<link href=/ubuntu2004/css/featherlight.min.css?1641708579 rel=stylesheet>
+<link href=/ubuntu2004/css/perfect-scrollbar.min.css?1641708579 rel=stylesheet>
+<link href=/ubuntu2004/css/auto-complete.css?1641708579 rel=stylesheet>
+<link href=/ubuntu2004/css/atom-one-dark-reasonable.css?1641708579 rel=stylesheet>
+<link href=/ubuntu2004/css/theme.css?1641708579 rel=stylesheet>
+<link href=/ubuntu2004/css/tabs.css?1641708579 rel=stylesheet>
+<link href=/ubuntu2004/css/hugo-theme.css?1641708579 rel=stylesheet>
+<script src=/ubuntu2004/js/jquery-3.3.1.min.js?1641708579></script>
+<style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
+</head>
+<body data-url=/ubuntu2004/monitoring/>
+<nav id=sidebar>
+<div id=header-wrapper>
+<div id=header>
+<a href=https://musaamin.github.io/ubuntu2004/><img src=https://raw.githubusercontent.com/musaamin/ubuntu2004/main/static/images/logo.png></a>
+</div>
+<div class=searchbox>
+<label for=search-by><i class="fas fa-search"></i></label>
+<input data-search-input id=search-by type=search placeholder=Search...>
+<span data-search-clear><i class="fas fa-times"></i></span>
+</div>
+<script type=text/javascript src=/ubuntu2004/js/lunr.min.js?1641708579></script>
+<script type=text/javascript src=/ubuntu2004/js/auto-complete.js?1641708579></script>
+<script type=text/javascript>var baseurl="https://musaamin.github.io/ubuntu2004/"</script>
+<script type=text/javascript src=/ubuntu2004/js/search.js?1641708579></script>
+</div>
+<div class=highlightable>
+<ul class=topics>
+<li data-nav-id=/ubuntu2004/vps/ title="Virtual Private Server" class=dd-item>
+<a href=/ubuntu2004/vps/>
+1. Virtual Private Server
+</a>
+</li>
+<li data-nav-id=/ubuntu2004/ssh/ title="Secure Shell (SSH)" class=dd-item>
+<a href=/ubuntu2004/ssh/>
+2. Secure Shell (SSH)
+</a>
+</li>
+<li data-nav-id=/ubuntu2004/filetransfer/ title="File Transfer" class=dd-item>
+<a href=/ubuntu2004/filetransfer/>
+3. File Transfer
+</a>
+</li>
+<li data-nav-id=/ubuntu2004/timezone/ title="Time Zone" class=dd-item>
+<a href=/ubuntu2004/timezone/>
+4. Time Zone
+</a>
+</li>
+<li data-nav-id=/ubuntu2004/mariadb/ title="MariaDB Database" class=dd-item>
+<a href=/ubuntu2004/mariadb/>
+5. MariaDB Database
+</a>
+</li>
+<li data-nav-id=/ubuntu2004/apache/ title="Apache Web Server" class=dd-item>
+<a href=/ubuntu2004/apache/>
+6. Apache Web Server
+</a>
+<ul>
+<li data-nav-id=/ubuntu2004/apache/php-apache/ title="PHP dengan Apache" class=dd-item>
+<a href=/ubuntu2004/apache/php-apache/>
+PHP dengan Apache
+</a>
+</li>
+<li data-nav-id=/ubuntu2004/apache/phpmyadmin-apache/ title="phpMyAdmin dengan Apache" class=dd-item>
+<a href=/ubuntu2004/apache/phpmyadmin-apache/>
+phpMyAdmin dengan Apache
+</a>
+</li>
+<li data-nav-id=/ubuntu2004/apache/letsencrypt-apache/ title="Let's Encrypt untuk Apache" class=dd-item>
+<a href=/ubuntu2004/apache/letsencrypt-apache/>
+Let's Encrypt untuk Apache
+</a>
+</li>
+<li data-nav-id=/ubuntu2004/apache/wordpress-apache/ title="WordPress dengan Apache" class=dd-item>
+<a href=/ubuntu2004/apache/wordpress-apache/>
+WordPress dengan Apache
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/ubuntu2004/nginx/ title="Nginx Web Server" class=dd-item>
+<a href=/ubuntu2004/nginx/>
+7. Nginx Web Server
+</a>
+<ul>
+<li data-nav-id=/ubuntu2004/nginx/php-nginx/ title="PHP dengan Nginx" class=dd-item>
+<a href=/ubuntu2004/nginx/php-nginx/>
+PHP dengan Nginx
+</a>
+</li>
+<li data-nav-id=/ubuntu2004/nginx/phpmyadmin-nginx/ title="phpMyAdmin dengan Nginx" class=dd-item>
+<a href=/ubuntu2004/nginx/phpmyadmin-nginx/>
+phpMyAdmin dengan Nginx
+</a>
+</li>
+<li data-nav-id=/ubuntu2004/nginx/letsencrypt-nginx/ title="Let's Encrypt untuk Nginx" class=dd-item>
+<a href=/ubuntu2004/nginx/letsencrypt-nginx/>
+Let's Encrypt untuk Nginx
+</a>
+</li>
+<li data-nav-id=/ubuntu2004/nginx/wordpress-nginx/ title="WordPress dengan Nginx" class=dd-item>
+<a href=/ubuntu2004/nginx/wordpress-nginx/>
+WordPress dengan Nginx
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/ubuntu2004/composer/ title=Composer class=dd-item>
+<a href=/ubuntu2004/composer/>
+8. Composer
+</a>
+</li>
+<li data-nav-id=/ubuntu2004/firewall/ title=Firewall class=dd-item>
+<a href=/ubuntu2004/firewall/>
+9. Firewall
+</a>
+</li>
+<li data-nav-id=/ubuntu2004/monitoring/ title="System Monitoring" class="dd-item
+parent
+active">
+<a href=/ubuntu2004/monitoring/>
+10. System Monitoring
+</a>
+</li>
+<li data-nav-id=/ubuntu2004/log/ title="Log File" class=dd-item>
+<a href=/ubuntu2004/log/>
+11. Log File
+</a>
+</li>
+<li data-nav-id=/ubuntu2004/backup/ title="Backup Data" class=dd-item>
+<a href=/ubuntu2004/backup/>
+12. Backup Data
+</a>
+</li>
+</ul>
+<section id=shortcuts>
+<h3>More</h3>
+<ul>
+<li>
+<a class=padding href=https://musaamin.web.id><i class="fab fa-fw fa-firefox"></i> Blog</a>
+</li>
+<li>
+<a class=padding href=https://www.youtube.com/musaamin><i class="fab fa-fw fa-youtube"></i> YouTube</a>
+</li>
+<li>
+<a class=padding href=https://www.twitter.com/musaamin><i class="fab fa-fw fa-twitter"></i> Twitter</a>
+</li>
+<li>
+<a class=padding href=https://www.facebook.com/musaaminwebid><i class="fab fa-fw fa-facebook"></i> Facebook</a>
+</li>
+<li>
+<a class=padding href=https://github.com/musaamin><i class="fab fa-fw fa-github"></i> GitHub</a>
+</li>
+</ul>
+</section>
+<section id=footer>
+<center>
+<p>Built with <a href=https://github.com/matcornic/hugo-theme-learn><i class="fas fa-heart"></i></a> from <a href=https://getgrav.org>Grav</a> and <a href=https://gohugo.io/>Hugo</a></p>
+</center>
+</section>
+</div>
+</nav>
+<section id=body>
+<div id=overlay></div>
+<div class="padding highlightable">
+<div>
+<div id=top-bar>
+<div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb>
+<span id=sidebar-toggle-span>
+<a href=# id=sidebar-toggle data-sidebar-toggle>
+<i class="fas fa-bars"></i>
+</a>
+</span>
+<span id=toc-menu><i class="fas fa-list-alt"></i></span>
+<span class=links>
+<a href=/ubuntu2004/>Home</a> > System Monitoring
+</span>
+</div>
+<div class=progress>
+<div class=wrapper>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#htop---interactive-process-viewer>htop - Interactive Process Viewer</a></li>
+<li><a href=#df---report-file-system-disk-space-usage>df - Report File System Disk Space Usage</a></li>
+<li><a href=#hetrixtools--uptime-monitoring>Hetrixtools – Uptime Monitoring</a>
+<ul>
+<li><a href=#uptime-monitoring>Uptime Monitoring</a></li>
+<li><a href=#monitoring-ssl-dan-domain>Monitoring SSL dan Domain</a></li>
+<li><a href=#server-monitoring>Server Monitoring</a></li>
+<li><a href=#notifikasi-ke-telegram>Notifikasi ke Telegram</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+<div id=head-tags>
+</div>
+<div id=body-inner>
+<h1>
+System Monitoring
+</h1>
+<p>System Monitoring adalah pemantauan pemakaian sumber daya server seperti pemakaian CPU, pemakaian RAM, storage, network, dan process. Dengan mengetahui seberapa besar pemakaian sumber daya, dapat menjadi salah satu pertimbangan dalam memutuskan apakah perlu menaikkan atau menurunkan kapasitas sumber daya server.</p>
+<h2 id=htop---interactive-process-viewer>htop - Interactive Process Viewer</h2>
+<p>htop adalah aplikasi berbasis CLI untuk menampilkan process dan sumber daya.</p>
+<p>Install htop.</p>
+<pre tabindex=0><code>sudo apt install htop
+</code></pre><p>Jalankan htop.</p>
+<pre tabindex=0><code>htop
+</code></pre><p><img src=https://raw.githubusercontent.com/musaamin/ubuntu2004/main/static/images/htop-atas.jpg alt="Gambar htop bagian atas"></p>
+<p><img src=https://raw.githubusercontent.com/musaamin/ubuntu2004/main/static/images/htop-bawah.jpg alt="Gambar htop bagian bawah"></p>
+<h2 id=df---report-file-system-disk-space-usage>df - Report File System Disk Space Usage</h2>
+<p>df adalah aplikasi untuk mengetahui disk dan partisi apa saja yang ada di server beserta seberapa besar pemakaiannya.</p>
+<pre tabindex=0><code>df -hT
+</code></pre><p>Contoh hasil perintah df.</p>
+<pre tabindex=0><code>Filesystem     Type      Size  Used Avail Use% Mounted on
+udev           devtmpfs  974M     0  974M   0% /dev
+tmpfs          tmpfs     200M  608K  199M   1% /run
+/dev/vda1      ext4       30G  3.3G   25G  12% /
+tmpfs          tmpfs     996M     0  996M   0% /dev/shm
+tmpfs          tmpfs     5.0M     0  5.0M   0% /run/lock
+tmpfs          tmpfs     996M     0  996M   0% /sys/fs/cgroup
+tmpfs          tmpfs     200M     0  200M   0% /run/user/1001
+</code></pre><p>Dari hasil perintah df di atas, terlihat bahwa partisi vda1 menggunakan file system ext4 dengan kapasitas penyimpanan 30GB, telah terpakai sebesar 3.3GB atau 12%, tersisa 25GB, dan termount di / (root).</p>
+<h2 id=hetrixtools--uptime-monitoring>Hetrixtools – Uptime Monitoring</h2>
+<p><a href=https://hetrixtools.com/>HetrixTools</a> adalah aplikasi cloud untuk uptime monitoring website dan juga memiliki fitur tambahan untuk system monitoring. HetrixTools menyediakan paket Free yang dapat memantau sampai 15 website/server.</p>
+<h3 id=uptime-monitoring>Uptime Monitoring</h3>
+<p>Membuat uptime monitoring.</p>
+<ol>
+<li>Login ke HetrixTools.</li>
+<li>Klik menu Tools → Uptime Monitors.</li>
+<li>Add Monitor.</li>
+<li>Monitor Type = Website Monitor, Monitor Name = Nama Monitor, Website URL = URL dari website, Monitor From = Pilih 4 lokasi server yang melakukan uptime check</li>
+<li>Add Monitor.</li>
+</ol>
+<h3 id=monitoring-ssl-dan-domain>Monitoring SSL dan Domain</h3>
+<p>HetrixTools dapat mengirimkan peringatan atau notifikasi ketika mendekati masa habis berlakunya sertifikat SSL dan domain, serta ketika terjadi perubahan nameserver pada domain.</p>
+<ol>
+<li>Klik nama monitor.</li>
+<li>SSL Cert. Expiration = pilih kapan mengirimkan peringatan SSL</li>
+<li>Domain Expiration = pilih kapan mengirimkan peringatan domain</li>
+<li>Domain NameServers = pilih kapan mengirimkan peringatan nameserver</li>
+</ol>
+<h3 id=server-monitoring>Server Monitoring</h3>
+<p>HetrixTools menyediakan fitur untuk server monitoring.</p>
+<p>Install HetrixTools Server Monitoring Agent.</p>
+<ol>
+<li>Klik nama monitor.</li>
+<li>Klik <em>Click to deploy our Server Monitoring Agent</em>.</li>
+<li>Centang <em>View Running Processes</em></li>
+<li>Centang <em>Monitor service?</em>, masukkan nama service yang ingin dipantau, misal apache2, nginx, mariadb, php7.4-fpm, ssh.</li>
+<li>Centang <em>Monitor port connections?</em>, masukkan nomor port yang ingin dipantau, misal 80, 443, 3306, 50000.</li>
+<li>Copy <em>Install Code</em>, lalu jalankan di server sebagai user root.</li>
+</ol>
+<h3 id=notifikasi-ke-telegram>Notifikasi ke Telegram</h3>
+<p>Terdapat 12 channel pengiriman notifikasi, secara default yang aktif adalah email yang digunakan saat mendaftar.</p>
+<p>Mengaktifkan notifikasi ke Telegram.</p>
+<ol>
+<li>Klik nama account HetrixTools.</li>
+<li>Klik <em>Contact Lists</em>.</li>
+<li>Klik icon Edit di kolom <em>Actions</em>.</li>
+<li>Klik Telegram.</li>
+<li>Buka aplikasi Telegram, Cari HetrixTools bot (@hetrixtools_bot), klik <em>Start</em> atau ketik <em>/start</em>, HetrixTools bot membalas dengan <em>Chat ID</em>. Copy <em>Chat ID</em>.</li>
+<li>Paste di kolom opsi Telegram pada <em>Edit Contact List</em>.</li>
+<li>Klik <em>Send test notification</em> untuk menguji pengiriman notifkasi ke Telegram.</li>
+<li>Klik <em>Edit</em> untuk simpan.</li>
+</ol>
+<p>Menguji notifikasi ke Telegram.</p>
+<ol>
+<li>Hentikan web server service untuk menguji status uptime dari website.</li>
+<li>Jika berhasil, HetrixTools akan mengirimkan notifkasi website down ke email dan Telegram.</li>
+<li>Jalankan kembali service milik web server, akan dikirimkan notifikasi bahwa website sudah up.</li>
+</ol>
+<footer class=footline>
+</footer>
+</div>
+</div>
+<div id=navigation>
+<a class="nav nav-prev" href=/ubuntu2004/firewall/ title=Firewall> <i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/ubuntu2004/log/ title="Log File" style=margin-right:0><i class="fa fa-chevron-right"></i></a>
+</div>
+</section>
+<div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
+<div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
+</div>
+<script src=/ubuntu2004/js/clipboard.min.js?1641708579></script>
+<script src=/ubuntu2004/js/perfect-scrollbar.min.js?1641708579></script>
+<script src=/ubuntu2004/js/perfect-scrollbar.jquery.min.js?1641708579></script>
+<script src=/ubuntu2004/js/jquery.sticky.js?1641708579></script>
+<script src=/ubuntu2004/js/featherlight.min.js?1641708579></script>
+<script src=/ubuntu2004/js/highlight.pack.js?1641708579></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<script src=/ubuntu2004/js/modernizr.custom-3.6.0.js?1641708579></script>
+<script src=/ubuntu2004/js/learn.js?1641708579></script>
+<script src=/ubuntu2004/js/hugo-learn.js?1641708579></script>
+<script src=/ubuntu2004/mermaid/mermaid.js?1641708579></script>
+<script>mermaid.initialize({startOnLoad:!0})</script>
+</body>
+</html>

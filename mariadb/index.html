@@ -1,0 +1,276 @@
+<!doctype html><html lang=en class="js csstransforms3d">
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=generator content="Hugo 0.91.2">
+<meta name=description content="Panduan Ubuntu Server 20.04 LTS">
+<meta name=author content="Musa Amin">
+<link rel="shortcut icon" href=https://raw.githubusercontent.com/musaamin/ubuntu2004/main/static/images/favicon.png type=image/x-icon>
+<title>MariaDB Database - Panduan Ubuntu Server 20.04 LTS</title>
+<link href=/ubuntu2004/css/nucleus.css?1641708579 rel=stylesheet>
+<link href=/ubuntu2004/css/fontawesome-all.min.css?1641708579 rel=stylesheet>
+<link href=/ubuntu2004/css/hybrid.css?1641708579 rel=stylesheet>
+<link href=/ubuntu2004/css/featherlight.min.css?1641708579 rel=stylesheet>
+<link href=/ubuntu2004/css/perfect-scrollbar.min.css?1641708579 rel=stylesheet>
+<link href=/ubuntu2004/css/auto-complete.css?1641708579 rel=stylesheet>
+<link href=/ubuntu2004/css/atom-one-dark-reasonable.css?1641708579 rel=stylesheet>
+<link href=/ubuntu2004/css/theme.css?1641708579 rel=stylesheet>
+<link href=/ubuntu2004/css/tabs.css?1641708579 rel=stylesheet>
+<link href=/ubuntu2004/css/hugo-theme.css?1641708579 rel=stylesheet>
+<script src=/ubuntu2004/js/jquery-3.3.1.min.js?1641708579></script>
+<style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
+</head>
+<body data-url=/ubuntu2004/mariadb/>
+<nav id=sidebar>
+<div id=header-wrapper>
+<div id=header>
+<a href=https://musaamin.github.io/ubuntu2004/><img src=https://raw.githubusercontent.com/musaamin/ubuntu2004/main/static/images/logo.png></a>
+</div>
+<div class=searchbox>
+<label for=search-by><i class="fas fa-search"></i></label>
+<input data-search-input id=search-by type=search placeholder=Search...>
+<span data-search-clear><i class="fas fa-times"></i></span>
+</div>
+<script type=text/javascript src=/ubuntu2004/js/lunr.min.js?1641708579></script>
+<script type=text/javascript src=/ubuntu2004/js/auto-complete.js?1641708579></script>
+<script type=text/javascript>var baseurl="https://musaamin.github.io/ubuntu2004/"</script>
+<script type=text/javascript src=/ubuntu2004/js/search.js?1641708579></script>
+</div>
+<div class=highlightable>
+<ul class=topics>
+<li data-nav-id=/ubuntu2004/vps/ title="Virtual Private Server" class=dd-item>
+<a href=/ubuntu2004/vps/>
+1. Virtual Private Server
+</a>
+</li>
+<li data-nav-id=/ubuntu2004/ssh/ title="Secure Shell (SSH)" class=dd-item>
+<a href=/ubuntu2004/ssh/>
+2. Secure Shell (SSH)
+</a>
+</li>
+<li data-nav-id=/ubuntu2004/filetransfer/ title="File Transfer" class=dd-item>
+<a href=/ubuntu2004/filetransfer/>
+3. File Transfer
+</a>
+</li>
+<li data-nav-id=/ubuntu2004/timezone/ title="Time Zone" class=dd-item>
+<a href=/ubuntu2004/timezone/>
+4. Time Zone
+</a>
+</li>
+<li data-nav-id=/ubuntu2004/mariadb/ title="MariaDB Database" class="dd-item
+parent
+active">
+<a href=/ubuntu2004/mariadb/>
+5. MariaDB Database
+</a>
+</li>
+<li data-nav-id=/ubuntu2004/apache/ title="Apache Web Server" class=dd-item>
+<a href=/ubuntu2004/apache/>
+6. Apache Web Server
+</a>
+<ul>
+<li data-nav-id=/ubuntu2004/apache/php-apache/ title="PHP dengan Apache" class=dd-item>
+<a href=/ubuntu2004/apache/php-apache/>
+PHP dengan Apache
+</a>
+</li>
+<li data-nav-id=/ubuntu2004/apache/phpmyadmin-apache/ title="phpMyAdmin dengan Apache" class=dd-item>
+<a href=/ubuntu2004/apache/phpmyadmin-apache/>
+phpMyAdmin dengan Apache
+</a>
+</li>
+<li data-nav-id=/ubuntu2004/apache/letsencrypt-apache/ title="Let's Encrypt untuk Apache" class=dd-item>
+<a href=/ubuntu2004/apache/letsencrypt-apache/>
+Let's Encrypt untuk Apache
+</a>
+</li>
+<li data-nav-id=/ubuntu2004/apache/wordpress-apache/ title="WordPress dengan Apache" class=dd-item>
+<a href=/ubuntu2004/apache/wordpress-apache/>
+WordPress dengan Apache
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/ubuntu2004/nginx/ title="Nginx Web Server" class=dd-item>
+<a href=/ubuntu2004/nginx/>
+7. Nginx Web Server
+</a>
+<ul>
+<li data-nav-id=/ubuntu2004/nginx/php-nginx/ title="PHP dengan Nginx" class=dd-item>
+<a href=/ubuntu2004/nginx/php-nginx/>
+PHP dengan Nginx
+</a>
+</li>
+<li data-nav-id=/ubuntu2004/nginx/phpmyadmin-nginx/ title="phpMyAdmin dengan Nginx" class=dd-item>
+<a href=/ubuntu2004/nginx/phpmyadmin-nginx/>
+phpMyAdmin dengan Nginx
+</a>
+</li>
+<li data-nav-id=/ubuntu2004/nginx/letsencrypt-nginx/ title="Let's Encrypt untuk Nginx" class=dd-item>
+<a href=/ubuntu2004/nginx/letsencrypt-nginx/>
+Let's Encrypt untuk Nginx
+</a>
+</li>
+<li data-nav-id=/ubuntu2004/nginx/wordpress-nginx/ title="WordPress dengan Nginx" class=dd-item>
+<a href=/ubuntu2004/nginx/wordpress-nginx/>
+WordPress dengan Nginx
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/ubuntu2004/composer/ title=Composer class=dd-item>
+<a href=/ubuntu2004/composer/>
+8. Composer
+</a>
+</li>
+<li data-nav-id=/ubuntu2004/firewall/ title=Firewall class=dd-item>
+<a href=/ubuntu2004/firewall/>
+9. Firewall
+</a>
+</li>
+<li data-nav-id=/ubuntu2004/monitoring/ title="System Monitoring" class=dd-item>
+<a href=/ubuntu2004/monitoring/>
+10. System Monitoring
+</a>
+</li>
+<li data-nav-id=/ubuntu2004/log/ title="Log File" class=dd-item>
+<a href=/ubuntu2004/log/>
+11. Log File
+</a>
+</li>
+<li data-nav-id=/ubuntu2004/backup/ title="Backup Data" class=dd-item>
+<a href=/ubuntu2004/backup/>
+12. Backup Data
+</a>
+</li>
+</ul>
+<section id=shortcuts>
+<h3>More</h3>
+<ul>
+<li>
+<a class=padding href=https://musaamin.web.id><i class="fab fa-fw fa-firefox"></i> Blog</a>
+</li>
+<li>
+<a class=padding href=https://www.youtube.com/musaamin><i class="fab fa-fw fa-youtube"></i> YouTube</a>
+</li>
+<li>
+<a class=padding href=https://www.twitter.com/musaamin><i class="fab fa-fw fa-twitter"></i> Twitter</a>
+</li>
+<li>
+<a class=padding href=https://www.facebook.com/musaaminwebid><i class="fab fa-fw fa-facebook"></i> Facebook</a>
+</li>
+<li>
+<a class=padding href=https://github.com/musaamin><i class="fab fa-fw fa-github"></i> GitHub</a>
+</li>
+</ul>
+</section>
+<section id=footer>
+<center>
+<p>Built with <a href=https://github.com/matcornic/hugo-theme-learn><i class="fas fa-heart"></i></a> from <a href=https://getgrav.org>Grav</a> and <a href=https://gohugo.io/>Hugo</a></p>
+</center>
+</section>
+</div>
+</nav>
+<section id=body>
+<div id=overlay></div>
+<div class="padding highlightable">
+<div>
+<div id=top-bar>
+<div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb>
+<span id=sidebar-toggle-span>
+<a href=# id=sidebar-toggle data-sidebar-toggle>
+<i class="fas fa-bars"></i>
+</a>
+</span>
+<span id=toc-menu><i class="fas fa-list-alt"></i></span>
+<span class=links>
+<a href=/ubuntu2004/>Home</a> > MariaDB Database
+</span>
+</div>
+<div class=progress>
+<div class=wrapper>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#memasang-repository-mariadb>Memasang Repository MariaDB</a></li>
+<li><a href=#install-mariadb>Install MariaDB</a></li>
+<li><a href=#mengamankan-instalasi-mariadb>Mengamankan Instalasi MariaDB</a></li>
+<li><a href=#membuat-user--database>Membuat User & Database</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+<div id=head-tags>
+</div>
+<div id=body-inner>
+<h1>
+MariaDB Database
+</h1>
+<p>MariaDB adalah RDBMS yang merupakan forking dari MySQL yang sekarang sudah dimiliki oleh Oracle. Sudah banyak distro Linux yang telah memasukkan MariaDB ke dalam official repository dan XAMPP pun sudah migrasi dari MySQL ke MariaDB. Website besar yang menggunakan MariaDB yaitu Wikipedia, Google, booking.com, dan Craiglist.</p>
+<h2 id=memasang-repository-mariadb>Memasang Repository MariaDB</h2>
+<p>Update dan upgrade Ubuntu terlebih dahulu, karena belum pernah dilakukan sebelumnya.</p>
+<pre tabindex=0><code>sudo apt update
+sudo apt upgrade -y
+</code></pre><p>Secara default versi MariaDB yang tersedia di repository Ubuntu 20.04 adalah MariaDB 10.3. Untuk memasang MariaDB versi terbaru, kita harus memasang <a href=https://downloads.mariadb.org/mariadb/repositories>repository MariaDB</a>.</p>
+<p>Install paket dependensi, key, dan repository MariaDB.</p>
+<pre tabindex=0><code>sudo apt-get install software-properties-common
+sudo apt-key adv --fetch-keys 'https://mariadb.org/mariadb_release_signing_key.asc'
+sudo add-apt-repository 'deb [arch=amd64,arm64,ppc64el] http://sgp1.mirrors.digitalocean.com/mariadb/repo/10.5/ubuntu focal main'
+</code></pre><h2 id=install-mariadb>Install MariaDB</h2>
+<p>Install MariaDB, lalu cek status mariadb service.</p>
+<pre tabindex=0><code>sudo apt install mariadb-server
+sudo systemctl status mariadb
+</code></pre><h2 id=mengamankan-instalasi-mariadb>Mengamankan Instalasi MariaDB</h2>
+<p>Jalankan tool untuk pengamanan instalasi MariaDB.</p>
+<pre tabindex=0><code>sudo mysql_secure_installation
+</code></pre><p>Lalu jawab pertanyaan yang diajukan seperti di bawah ini.</p>
+<pre tabindex=0><code>Enter current password for root (enter for none): ENTER
+Switch to unix_socket authentication [Y/n] y
+Change the root password? [Y/n] y
+Remove anonymous users? [Y/n] y
+Disallow root login remotely? [Y/n] y
+Remove test database and access to it? [Y/n] y	
+Reload privilege tables now? [Y/n] y 
+</code></pre><h2 id=membuat-user--database>Membuat User & Database</h2>
+<p>Demi keamanan database, setiap database memiliki user tersendiri.</p>
+<p>Login ke MariaDB dengan username root.</p>
+<pre tabindex=0><code>sudo mysql -u root -p
+</code></pre><p>Membuat database, user, dan memberikan hak akses database ke user yang baru dibuat.</p>
+<pre tabindex=0><code>CREATE DATABASE wordpress;
+CREATE USER 'wordpress'@'localhost' IDENTIFIED BY 'rahasia';
+GRANT ALL PRIVILEGES ON wordpress.* TO 'wordpress'@'localhost';
+FLUSH PRIVILEGES;
+exit
+</code></pre><p>Login kembali ke MariaDB dengan user yang baru dibuat untuk mengecek apakah user dan database yang dibuat.</p>
+<pre tabindex=0><code>mysql -u wordpress -p
+SHOW DATABASES;
+exit
+</code></pre>
+<footer class=footline>
+</footer>
+</div>
+</div>
+<div id=navigation>
+<a class="nav nav-prev" href=/ubuntu2004/timezone/ title="Time Zone"> <i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/ubuntu2004/apache/ title="Apache Web Server" style=margin-right:0><i class="fa fa-chevron-right"></i></a>
+</div>
+</section>
+<div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
+<div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
+</div>
+<script src=/ubuntu2004/js/clipboard.min.js?1641708579></script>
+<script src=/ubuntu2004/js/perfect-scrollbar.min.js?1641708579></script>
+<script src=/ubuntu2004/js/perfect-scrollbar.jquery.min.js?1641708579></script>
+<script src=/ubuntu2004/js/jquery.sticky.js?1641708579></script>
+<script src=/ubuntu2004/js/featherlight.min.js?1641708579></script>
+<script src=/ubuntu2004/js/highlight.pack.js?1641708579></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<script src=/ubuntu2004/js/modernizr.custom-3.6.0.js?1641708579></script>
+<script src=/ubuntu2004/js/learn.js?1641708579></script>
+<script src=/ubuntu2004/js/hugo-learn.js?1641708579></script>
+<script src=/ubuntu2004/mermaid/mermaid.js?1641708579></script>
+<script>mermaid.initialize({startOnLoad:!0})</script>
+</body>
+</html>
