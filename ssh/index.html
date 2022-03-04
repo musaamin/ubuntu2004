@@ -2,70 +2,59 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=generator content="Hugo 0.91.2">
+<meta name=generator content="Hugo 0.93.1">
 <meta name=description content="Panduan Ubuntu Server 20.04 LTS">
 <meta name=author content="Musa Amin">
 <link rel="shortcut icon" href=https://raw.githubusercontent.com/musaamin/ubuntu2004/main/static/images/favicon.png type=image/x-icon>
-<title>Secure Shell (SSH) - Panduan Ubuntu Server 20.04 LTS</title>
-<link href=/ubuntu2004/css/nucleus.css?1641708721 rel=stylesheet>
-<link href=/ubuntu2004/css/fontawesome-all.min.css?1641708721 rel=stylesheet>
-<link href=/ubuntu2004/css/hybrid.css?1641708721 rel=stylesheet>
-<link href=/ubuntu2004/css/featherlight.min.css?1641708721 rel=stylesheet>
-<link href=/ubuntu2004/css/perfect-scrollbar.min.css?1641708721 rel=stylesheet>
-<link href=/ubuntu2004/css/auto-complete.css?1641708721 rel=stylesheet>
-<link href=/ubuntu2004/css/atom-one-dark-reasonable.css?1641708721 rel=stylesheet>
-<link href=/ubuntu2004/css/theme.css?1641708721 rel=stylesheet>
-<link href=/ubuntu2004/css/tabs.css?1641708721 rel=stylesheet>
-<link href=/ubuntu2004/css/hugo-theme.css?1641708721 rel=stylesheet>
-<script src=/ubuntu2004/js/jquery-3.3.1.min.js?1641708721></script>
-<style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
-</head>
-<body data-url=/ubuntu2004/ssh/>
+<title>Secure Shell (SSH) - Panduan Ubuntu Server 20.04 LTS</title><link href=/ubuntu2004/css/nucleus.css?1646373285 rel=stylesheet>
+<link href=/ubuntu2004/css/fontawesome-all.min.css?1646373285 rel=stylesheet>
+<link href=/ubuntu2004/css/hybrid.css?1646373285 rel=stylesheet>
+<link href=/ubuntu2004/css/featherlight.min.css?1646373285 rel=stylesheet>
+<link href=/ubuntu2004/css/perfect-scrollbar.min.css?1646373285 rel=stylesheet>
+<link href=/ubuntu2004/css/auto-complete.css?1646373285 rel=stylesheet>
+<link href=/ubuntu2004/css/atom-one-dark-reasonable.css?1646373285 rel=stylesheet>
+<link href=/ubuntu2004/css/theme.css?1646373285 rel=stylesheet>
+<link href=/ubuntu2004/css/tabs.css?1646373285 rel=stylesheet>
+<link href=/ubuntu2004/css/hugo-theme.css?1646373285 rel=stylesheet>
+<script src=/ubuntu2004/js/jquery-3.3.1.min.js?1646373285></script>
+<style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/ubuntu2004/ssh/>
 <nav id=sidebar>
 <div id=header-wrapper>
 <div id=header>
 <a href=https://musaamin.github.io/ubuntu2004/><img src=https://raw.githubusercontent.com/musaamin/ubuntu2004/main/static/images/logo.png></a>
-</div>
-<div class=searchbox>
+</div><div class=searchbox>
 <label for=search-by><i class="fas fa-search"></i></label>
 <input data-search-input id=search-by type=search placeholder=Search...>
 <span data-search-clear><i class="fas fa-times"></i></span>
-</div>
-<script type=text/javascript src=/ubuntu2004/js/lunr.min.js?1641708721></script>
-<script type=text/javascript src=/ubuntu2004/js/auto-complete.js?1641708721></script>
+</div><script type=text/javascript src=/ubuntu2004/js/lunr.min.js?1646373285></script>
+<script type=text/javascript src=/ubuntu2004/js/auto-complete.js?1646373285></script>
 <script type=text/javascript>var baseurl="https://musaamin.github.io/ubuntu2004/"</script>
-<script type=text/javascript src=/ubuntu2004/js/search.js?1641708721></script>
-</div>
-<div class=highlightable>
+<script type=text/javascript src=/ubuntu2004/js/search.js?1646373285></script>
+</div><div class=highlightable>
 <ul class=topics>
 <li data-nav-id=/ubuntu2004/vps/ title="Virtual Private Server" class=dd-item>
 <a href=/ubuntu2004/vps/>
 1. Virtual Private Server
 </a>
-</li>
-<li data-nav-id=/ubuntu2004/ssh/ title="Secure Shell (SSH)" class="dd-item
+</li><li data-nav-id=/ubuntu2004/ssh/ title="Secure Shell (SSH)" class="dd-item
 parent
 active">
 <a href=/ubuntu2004/ssh/>
 2. Secure Shell (SSH)
 </a>
-</li>
-<li data-nav-id=/ubuntu2004/filetransfer/ title="File Transfer" class=dd-item>
+</li><li data-nav-id=/ubuntu2004/filetransfer/ title="File Transfer" class=dd-item>
 <a href=/ubuntu2004/filetransfer/>
 3. File Transfer
 </a>
-</li>
-<li data-nav-id=/ubuntu2004/timezone/ title="Time Zone" class=dd-item>
+</li><li data-nav-id=/ubuntu2004/timezone/ title="Time Zone" class=dd-item>
 <a href=/ubuntu2004/timezone/>
 4. Time Zone
 </a>
-</li>
-<li data-nav-id=/ubuntu2004/mariadb/ title="MariaDB Database" class=dd-item>
+</li><li data-nav-id=/ubuntu2004/mariadb/ title="MariaDB Database" class=dd-item>
 <a href=/ubuntu2004/mariadb/>
 5. MariaDB Database
 </a>
-</li>
-<li data-nav-id=/ubuntu2004/apache/ title="Apache Web Server" class=dd-item>
+</li><li data-nav-id=/ubuntu2004/apache/ title="Apache Web Server" class=dd-item>
 <a href=/ubuntu2004/apache/>
 6. Apache Web Server
 </a>
@@ -74,25 +63,19 @@ active">
 <a href=/ubuntu2004/apache/php-apache/>
 PHP dengan Apache
 </a>
-</li>
-<li data-nav-id=/ubuntu2004/apache/phpmyadmin-apache/ title="phpMyAdmin dengan Apache" class=dd-item>
+</li><li data-nav-id=/ubuntu2004/apache/phpmyadmin-apache/ title="phpMyAdmin dengan Apache" class=dd-item>
 <a href=/ubuntu2004/apache/phpmyadmin-apache/>
 phpMyAdmin dengan Apache
 </a>
-</li>
-<li data-nav-id=/ubuntu2004/apache/letsencrypt-apache/ title="Let's Encrypt untuk Apache" class=dd-item>
+</li><li data-nav-id=/ubuntu2004/apache/letsencrypt-apache/ title="Let's Encrypt untuk Apache" class=dd-item>
 <a href=/ubuntu2004/apache/letsencrypt-apache/>
 Let's Encrypt untuk Apache
 </a>
-</li>
-<li data-nav-id=/ubuntu2004/apache/wordpress-apache/ title="WordPress dengan Apache" class=dd-item>
+</li><li data-nav-id=/ubuntu2004/apache/wordpress-apache/ title="WordPress dengan Apache" class=dd-item>
 <a href=/ubuntu2004/apache/wordpress-apache/>
 WordPress dengan Apache
 </a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/ubuntu2004/nginx/ title="Nginx Web Server" class=dd-item>
+</li></ul></li><li data-nav-id=/ubuntu2004/nginx/ title="Nginx Web Server" class=dd-item>
 <a href=/ubuntu2004/nginx/>
 7. Nginx Web Server
 </a>
@@ -101,80 +84,55 @@ WordPress dengan Apache
 <a href=/ubuntu2004/nginx/php-nginx/>
 PHP dengan Nginx
 </a>
-</li>
-<li data-nav-id=/ubuntu2004/nginx/phpmyadmin-nginx/ title="phpMyAdmin dengan Nginx" class=dd-item>
+</li><li data-nav-id=/ubuntu2004/nginx/phpmyadmin-nginx/ title="phpMyAdmin dengan Nginx" class=dd-item>
 <a href=/ubuntu2004/nginx/phpmyadmin-nginx/>
 phpMyAdmin dengan Nginx
 </a>
-</li>
-<li data-nav-id=/ubuntu2004/nginx/letsencrypt-nginx/ title="Let's Encrypt untuk Nginx" class=dd-item>
+</li><li data-nav-id=/ubuntu2004/nginx/letsencrypt-nginx/ title="Let's Encrypt untuk Nginx" class=dd-item>
 <a href=/ubuntu2004/nginx/letsencrypt-nginx/>
 Let's Encrypt untuk Nginx
 </a>
-</li>
-<li data-nav-id=/ubuntu2004/nginx/wordpress-nginx/ title="WordPress dengan Nginx" class=dd-item>
+</li><li data-nav-id=/ubuntu2004/nginx/wordpress-nginx/ title="WordPress dengan Nginx" class=dd-item>
 <a href=/ubuntu2004/nginx/wordpress-nginx/>
 WordPress dengan Nginx
 </a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/ubuntu2004/composer/ title=Composer class=dd-item>
+</li></ul></li><li data-nav-id=/ubuntu2004/composer/ title=Composer class=dd-item>
 <a href=/ubuntu2004/composer/>
 8. Composer
 </a>
-</li>
-<li data-nav-id=/ubuntu2004/firewall/ title=Firewall class=dd-item>
+</li><li data-nav-id=/ubuntu2004/firewall/ title=Firewall class=dd-item>
 <a href=/ubuntu2004/firewall/>
 9. Firewall
 </a>
-</li>
-<li data-nav-id=/ubuntu2004/monitoring/ title="System Monitoring" class=dd-item>
+</li><li data-nav-id=/ubuntu2004/monitoring/ title="System Monitoring" class=dd-item>
 <a href=/ubuntu2004/monitoring/>
 10. System Monitoring
 </a>
-</li>
-<li data-nav-id=/ubuntu2004/log/ title="Log File" class=dd-item>
+</li><li data-nav-id=/ubuntu2004/log/ title="Log File" class=dd-item>
 <a href=/ubuntu2004/log/>
 11. Log File
 </a>
-</li>
-<li data-nav-id=/ubuntu2004/backup/ title="Backup Data" class=dd-item>
+</li><li data-nav-id=/ubuntu2004/backup/ title="Backup Data" class=dd-item>
 <a href=/ubuntu2004/backup/>
 12. Backup Data
 </a>
-</li>
-</ul>
-<section id=shortcuts>
-<h3>More</h3>
-<ul>
+</li></ul><section id=shortcuts>
+<h3>More</h3><ul>
 <li>
 <a class=padding href=https://musaamin.web.id><i class="fab fa-fw fa-firefox"></i> Blog</a>
-</li>
-<li>
+</li><li>
 <a class=padding href=https://www.youtube.com/musaamin><i class="fab fa-fw fa-youtube"></i> YouTube</a>
-</li>
-<li>
+</li><li>
 <a class=padding href=https://www.twitter.com/musaamin><i class="fab fa-fw fa-twitter"></i> Twitter</a>
-</li>
-<li>
+</li><li>
 <a class=padding href=https://www.facebook.com/musaaminwebid><i class="fab fa-fw fa-facebook"></i> Facebook</a>
-</li>
-<li>
+</li><li>
 <a class=padding href=https://github.com/musaamin><i class="fab fa-fw fa-github"></i> GitHub</a>
-</li>
-</ul>
-</section>
-<section id=footer>
+</li></ul></section><section id=footer>
 <center>
-<p>Built with <a href=https://github.com/matcornic/hugo-theme-learn><i class="fas fa-heart"></i></a> from <a href=https://getgrav.org>Grav</a> and <a href=https://gohugo.io/>Hugo</a></p>
-</center>
-</section>
-</div>
-</nav>
-<section id=body>
-<div id=overlay></div>
-<div class="padding highlightable">
+<p>Built with <a href=https://github.com/matcornic/hugo-theme-learn><i class="fas fa-heart"></i></a> from <a href=https://getgrav.org>Grav</a> and <a href=https://gohugo.io/>Hugo</a></p></center>
+</section></div></nav><section id=body>
+<div id=overlay></div><div class="padding highlightable">
 <div>
 <div id=top-bar>
 <div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb>
@@ -187,149 +145,63 @@ WordPress dengan Nginx
 <span class=links>
 <a href=/ubuntu2004/>Home</a> > Secure Shell (SSH)
 </span>
-</div>
-<div class=progress>
+</div><div class=progress>
 <div class=wrapper>
 <nav id=TableOfContents>
 <ul>
-<li><a href=#mengakses-vps-di-windows>Mengakses VPS di Windows</a></li>
-<li><a href=#mengakses-vps-di-linux>Mengakses VPS di Linux</a></li>
-<li><a href=#mengamankan-ssh-server>Mengamankan SSH Server</a></li>
-</ul>
-</nav>
-</div>
-</div>
-</div>
-</div>
-<div id=head-tags>
-</div>
-<div id=body-inner>
+<li><a href=#mengakses-vps-di-windows>Mengakses VPS di Windows</a></li><li><a href=#mengakses-vps-di-linux>Mengakses VPS di Linux</a></li><li><a href=#mengamankan-ssh-server>Mengamankan SSH Server</a></li></ul></nav></div></div></div></div><div id=head-tags>
+</div><div id=body-inner>
 <h1>
 Secure Shell (SSH)
-</h1>
-<p>Untuk bisa mengakses VPS digunakan protokol SSH (Secure Shell). SSH server secara default telah aktif di VPS agar dapat langsung kita remote. Informasi VPS yang dibutuhkan untuk SSH remote adalah Public IP address, username, password, dan nomor port SSH.</p>
-<h2 id=mengakses-vps-di-windows>Mengakses VPS di Windows</h2>
-<p>Mengakses VPS dari Windows memerlukan aplikasi SSH client salah satunya Xshell. Xshell tersedia dalam versi berbayar dan gratis (Free License). Cukup mengisi form download, link download terkirim ke email.</p>
-<p><strong>Login SSH Memakai Password di Xshell</strong></p>
-<ol>
-<li>Buat session baru</li>
-<li>Masukkan Name = Nama session, Protocol = SSH, Host = Public IP, Port Number = Nomor Port SSH (default 22)</li>
-<li>Klik Connect</li>
-</ol>
-<h2 id=mengakses-vps-di-linux>Mengakses VPS di Linux</h2>
-<p>Aplikasi SSH client di Linux menggunakan OpenSSH client yang sudah tersedia secara default di berbagai distro Linux. Aplikasi OpenSSH client ini berbasis Command Line Interface (CLI) yang diakses melalui terminal atau console.</p>
-<p><strong>Login SSH Memakai Password di Linux</strong></p>
-<ol>
-<li>Buka terminal</li>
-<li>Ketik perintah ssh untuk login ke server, misal login SSH ke server IP 64.20.51.164 dengan user root</li>
-</ol>
-<pre tabindex=0><code>ssh root@64.20.51.164
-</code></pre><h2 id=mengamankan-ssh-server>Mengamankan SSH Server</h2>
-<p><strong>Mengganti Nomor Port SSH</strong></p>
-<p>Secara default nomor port SSH yaitu 22. Mengganti dengan nomor lain dapat mencegah orang-orang atau bot yang ingin mencoba login SSH ke VPS. Gantilah dengan nomor port lain yang belum digunakan. Jika mengikuti standar dari IANA, nomor yang disarankan untuk digunakan yaitu mulai dari 49152 sampai 65535.</p>
-<p>Misalnya mengubah port SSH ke 50000.</p>
-<p>Buka file konfigurasi SSH server</p>
-<pre tabindex=0><code>nano /etc/ssh/sshd_config
-</code></pre><p>Cari baris opsi #Port 22, lepas tanda # (komentar), dan ganti nomor 22 ke 50000.</p>
-<pre tabindex=0><code>Port 50000
-</code></pre><p>Lalu restart SSH service.</p>
-<pre tabindex=0><code>systemctl restart ssh
+</h1><p>Untuk bisa mengakses VPS digunakan protokol SSH (Secure Shell). SSH server secara default telah aktif di VPS agar dapat langsung kita remote. Informasi VPS yang dibutuhkan untuk SSH remote adalah Public IP address, username, password, dan nomor port SSH.</p><h2 id=mengakses-vps-di-windows>Mengakses VPS di Windows</h2><p>Mengakses VPS dari Windows memerlukan aplikasi SSH client salah satunya Xshell. Xshell tersedia dalam versi berbayar dan gratis (Free License). Cukup mengisi form download, link download terkirim ke email.</p><p><strong>Login SSH Memakai Password di Xshell</strong></p><ol>
+<li>Buat session baru</li><li>Masukkan Name = Nama session, Protocol = SSH, Host = Public IP, Port Number = Nomor Port SSH (default 22)</li><li>Klik Connect</li></ol><h2 id=mengakses-vps-di-linux>Mengakses VPS di Linux</h2><p>Aplikasi SSH client di Linux menggunakan OpenSSH client yang sudah tersedia secara default di berbagai distro Linux. Aplikasi OpenSSH client ini berbasis Command Line Interface (CLI) yang diakses melalui terminal atau console.</p><p><strong>Login SSH Memakai Password di Linux</strong></p><ol>
+<li>Buka terminal</li><li>Ketik perintah ssh untuk login ke server, misal login SSH ke server IP 64.20.51.164 dengan user root</li></ol><pre tabindex=0><code>ssh root@64.20.51.164
+</code></pre><h2 id=mengamankan-ssh-server>Mengamankan SSH Server</h2><p><strong>Mengganti Nomor Port SSH</strong></p><p>Secara default nomor port SSH yaitu 22. Mengganti dengan nomor lain dapat mencegah orang-orang atau bot yang ingin mencoba login SSH ke VPS. Gantilah dengan nomor port lain yang belum digunakan. Jika mengikuti standar dari IANA, nomor yang disarankan untuk digunakan yaitu mulai dari 49152 sampai 65535.</p><p>Misalnya mengubah port SSH ke 50000.</p><p>Buka file konfigurasi SSH server</p><pre tabindex=0><code>nano /etc/ssh/sshd_config
+</code></pre><p>Cari baris opsi #Port 22, lepas tanda # (komentar), dan ganti nomor 22 ke 50000.</p><pre tabindex=0><code>Port 50000
+</code></pre><p>Lalu restart SSH service.</p><pre tabindex=0><code>systemctl restart ssh
 systemctl status ssh
-</code></pre><p>Untuk remote SSH di Xshell jangan lupa ubah Port Number menjadi 50000.</p>
-<p>Sementara di Linux, tambahkan parameter -p untuk custom port SSH.</p>
-<pre tabindex=0><code>ssh root@64.20.51.164 -p 50000
-</code></pre><p><strong>Disable root Login</strong></p>
-<p>Menonaktifkan login SSH dengan user root. Langkah pertama yang harus dilakukan yaitu membuat user baru, diberikan hak ases root.</p>
-<pre tabindex=0><code>adduser musa 
+</code></pre><p>Untuk remote SSH di Xshell jangan lupa ubah Port Number menjadi 50000.</p><p>Sementara di Linux, tambahkan parameter -p untuk custom port SSH.</p><pre tabindex=0><code>ssh root@64.20.51.164 -p 50000
+</code></pre><p><strong>Disable root Login</strong></p><p>Menonaktifkan login SSH dengan user root. Langkah pertama yang harus dilakukan yaitu membuat user baru, diberikan hak ases root.</p><pre tabindex=0><code>adduser musa 
 usermod -aG sudo musa 
-</code></pre><p>Ubah kembali konfigurasi SSH server, cari opsi PermitRootLogin dan ubah nilainya menjadi no.</p>
-<pre tabindex=0><code>PermitRootLogin no
-</code></pre><p><strong>Login SSH Memakai Key</strong></p>
-<p>Login SSH dengan key lebih aman dibandingkan login menggunakan password.</p>
-<p><strong>Membuat SSH Key di Xshell</strong></p>
-<ol>
-<li>Tools → User Key Manager.</li>
-<li>Generate.</li>
-<li>Next.</li>
-<li>Key Name = nama key, misal key-getbox.</li>
-<li>Key Passphrase untuk pengamanan key, sebelum digunakan harus memasukkan Passphrase. Tidak harus diisi.</li>
-<li>Finish.</li>
-<li>Buka Properties Key.</li>
-<li>Copy Public Key yang ditampilkan.</li>
-</ol>
-<p><strong>Memasukkan Public Key dari Windows ke Server</strong></p>
-<ol>
-<li>Login SSH ke VPS.</li>
-<li>Buat folder .ssh di dalam direktori home jika belum ada.</li>
-<li>Masuk ke folder .ssh.</li>
-<li>Buat file authorized_keys jika belum ada.</li>
-<li>Paste SSH key.</li>
-</ol>
-<pre tabindex=0><code>mkdir ~/.ssh
+</code></pre><p>Ubah kembali konfigurasi SSH server, cari opsi PermitRootLogin dan ubah nilainya menjadi no.</p><pre tabindex=0><code>PermitRootLogin no
+</code></pre><p><strong>Login SSH Memakai Key</strong></p><p>Login SSH dengan key lebih aman dibandingkan login menggunakan password.</p><p><strong>Membuat SSH Key di Xshell</strong></p><ol>
+<li>Tools → User Key Manager.</li><li>Generate.</li><li>Next.</li><li>Key Name = nama key, misal key-getbox.</li><li>Key Passphrase untuk pengamanan key, sebelum digunakan harus memasukkan Passphrase. Tidak harus diisi.</li><li>Finish.</li><li>Buka Properties Key.</li><li>Copy Public Key yang ditampilkan.</li></ol><p><strong>Memasukkan Public Key dari Windows ke Server</strong></p><ol>
+<li>Login SSH ke VPS.</li><li>Buat folder .ssh di dalam direktori home jika belum ada.</li><li>Masuk ke folder .ssh.</li><li>Buat file authorized_keys jika belum ada.</li><li>Paste SSH key.</li></ol><pre tabindex=0><code>mkdir ~/.ssh
 chmod 700 ~/.ssh
 cd ~/.ssh
 nano authorized_keys
 chmod 600 authorized_keys
-</code></pre><p><strong>Login SSH dengan Key di Xshell</strong></p>
-<ol>
-<li>Buka Properties dari Session.</li>
-<li>Klik menu Connection → Authentication.</li>
-<li>Pilih Method = Public Key, Username = root, User Key = nama key yang sudah dibuat sebelumnya.</li>
-<li>Klik Connect.</li>
-</ol>
-<p><strong>Membuat SSH Key di Linux</strong></p>
-<ol>
-<li>Jalankan perintah ssh-key untuk generate SSH key.</li>
-<li>Berikan nama file lengkap dengan path direktori penyimpanan.</li>
-<li>Misal namanya key-server, tercipta 2 file yaitu key-server berisi Private Key dan key-server.pub berisi Public Key.</li>
-</ol>
-<pre tabindex=0><code>ssh-keygen
+</code></pre><p><strong>Login SSH dengan Key di Xshell</strong></p><ol>
+<li>Buka Properties dari Session.</li><li>Klik menu Connection → Authentication.</li><li>Pilih Method = Public Key, Username = root, User Key = nama key yang sudah dibuat sebelumnya.</li><li>Klik Connect.</li></ol><p><strong>Membuat SSH Key di Linux</strong></p><ol>
+<li>Jalankan perintah ssh-key untuk generate SSH key.</li><li>Berikan nama file lengkap dengan path direktori penyimpanan.</li><li>Misal namanya key-server, tercipta 2 file yaitu key-server berisi Private Key dan key-server.pub berisi Public Key.</li></ol><pre tabindex=0><code>ssh-keygen
 Generating public/private rsa key pair.
 Enter file in which to save the key (/home/musa/.ssh/id_rsa): /home/musa/.ssh/key-server 
-</code></pre><p><strong>Memasukkan Public Key dari Linux ke Server</strong></p>
-<p>Mengirim SSH key ke VPS dengan memakai perintah ssh-copy-id.</p>
-<pre tabindex=0><code>ssh-copy-id -i ~/.ssh/key-server root@64.20.51.164 -p 50000
-</code></pre><p><strong>Mengaktifkan Login SSH dengan Key</strong></p>
-<p>Buka kembali file konfigurasi SSH dan sesuaikan dengan opsi di bawah ini.</p>
-<pre tabindex=0><code>PubkeyAuthentication yes	
+</code></pre><p><strong>Memasukkan Public Key dari Linux ke Server</strong></p><p>Mengirim SSH key ke VPS dengan memakai perintah ssh-copy-id.</p><pre tabindex=0><code>ssh-copy-id -i ~/.ssh/key-server root@64.20.51.164 -p 50000
+</code></pre><p><strong>Mengaktifkan Login SSH dengan Key</strong></p><p>Buka kembali file konfigurasi SSH dan sesuaikan dengan opsi di bawah ini.</p><pre tabindex=0><code>PubkeyAuthentication yes	
 PasswordAuthentication no 
-</code></pre><p><strong>Koneksi SSH client dengan file config di Linux</strong></p>
-<p>Membuat file konfigurasi agar lebih mudah melakukan koneksi SSH tanpa harus mengetikkan perintah yang cukup panjang.</p>
-<p>Membuat file config dengan nano text editor.</p>
-<pre tabindex=0><code>nano ~/.ssh/config
-</code></pre><p>Isi dengan konfigurasi koneksi SSH</p>
-<pre tabindex=0><code>Host server
+</code></pre><p><strong>Koneksi SSH client dengan file config di Linux</strong></p><p>Membuat file konfigurasi agar lebih mudah melakukan koneksi SSH tanpa harus mengetikkan perintah yang cukup panjang.</p><p>Membuat file config dengan nano text editor.</p><pre tabindex=0><code>nano ~/.ssh/config
+</code></pre><p>Isi dengan konfigurasi koneksi SSH</p><pre tabindex=0><code>Host server
 HostName 64.20.51.164 
   IdentityFile /home/musa/.ssh/key-server
   IdentitiesOnly=yes
   Port 22
   User musa
-</code></pre><p>Dengan konfigurasi SSH client di atas, kita cukup menjalankan perintah di bawah ini untuk terhubung ke VPS, tanpa harus memasukkan parameter SSH key, username, IP address, dan nomor port.</p>
-<pre tabindex=0><code>ssh server
-</code></pre>
-<footer class=footline>
-</footer>
-</div>
-</div>
-<div id=navigation>
+</code></pre><p>Dengan konfigurasi SSH client di atas, kita cukup menjalankan perintah di bawah ini untuk terhubung ke VPS, tanpa harus memasukkan parameter SSH key, username, IP address, dan nomor port.</p><pre tabindex=0><code>ssh server
+</code></pre><footer class=footline>
+</footer></div></div><div id=navigation>
 <a class="nav nav-prev" href=/ubuntu2004/vps/ title="Virtual Private Server"> <i class="fa fa-chevron-left"></i></a>
 <a class="nav nav-next" href=/ubuntu2004/filetransfer/ title="File Transfer" style=margin-right:0><i class="fa fa-chevron-right"></i></a>
-</div>
-</section>
-<div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
-<div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
-</div>
-<script src=/ubuntu2004/js/clipboard.min.js?1641708721></script>
-<script src=/ubuntu2004/js/perfect-scrollbar.min.js?1641708721></script>
-<script src=/ubuntu2004/js/perfect-scrollbar.jquery.min.js?1641708721></script>
-<script src=/ubuntu2004/js/jquery.sticky.js?1641708721></script>
-<script src=/ubuntu2004/js/featherlight.min.js?1641708721></script>
-<script src=/ubuntu2004/js/highlight.pack.js?1641708721></script>
+</div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
+<div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/ubuntu2004/js/clipboard.min.js?1646373285></script>
+<script src=/ubuntu2004/js/perfect-scrollbar.min.js?1646373285></script>
+<script src=/ubuntu2004/js/perfect-scrollbar.jquery.min.js?1646373285></script>
+<script src=/ubuntu2004/js/jquery.sticky.js?1646373285></script>
+<script src=/ubuntu2004/js/featherlight.min.js?1646373285></script>
+<script src=/ubuntu2004/js/highlight.pack.js?1646373285></script>
 <script>hljs.initHighlightingOnLoad()</script>
-<script src=/ubuntu2004/js/modernizr.custom-3.6.0.js?1641708721></script>
-<script src=/ubuntu2004/js/learn.js?1641708721></script>
-<script src=/ubuntu2004/js/hugo-learn.js?1641708721></script>
-<script src=/ubuntu2004/mermaid/mermaid.js?1641708721></script>
+<script src=/ubuntu2004/js/modernizr.custom-3.6.0.js?1646373285></script>
+<script src=/ubuntu2004/js/learn.js?1646373285></script>
+<script src=/ubuntu2004/js/hugo-learn.js?1646373285></script>
+<script src=/ubuntu2004/mermaid/mermaid.js?1646373285></script>
 <script>mermaid.initialize({startOnLoad:!0})</script>
-</body>
-</html>
+</body></html>

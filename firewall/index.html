@@ -2,68 +2,57 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=generator content="Hugo 0.91.2">
+<meta name=generator content="Hugo 0.93.1">
 <meta name=description content="Panduan Ubuntu Server 20.04 LTS">
 <meta name=author content="Musa Amin">
 <link rel="shortcut icon" href=https://raw.githubusercontent.com/musaamin/ubuntu2004/main/static/images/favicon.png type=image/x-icon>
-<title>Firewall - Panduan Ubuntu Server 20.04 LTS</title>
-<link href=/ubuntu2004/css/nucleus.css?1641708721 rel=stylesheet>
-<link href=/ubuntu2004/css/fontawesome-all.min.css?1641708721 rel=stylesheet>
-<link href=/ubuntu2004/css/hybrid.css?1641708721 rel=stylesheet>
-<link href=/ubuntu2004/css/featherlight.min.css?1641708721 rel=stylesheet>
-<link href=/ubuntu2004/css/perfect-scrollbar.min.css?1641708721 rel=stylesheet>
-<link href=/ubuntu2004/css/auto-complete.css?1641708721 rel=stylesheet>
-<link href=/ubuntu2004/css/atom-one-dark-reasonable.css?1641708721 rel=stylesheet>
-<link href=/ubuntu2004/css/theme.css?1641708721 rel=stylesheet>
-<link href=/ubuntu2004/css/tabs.css?1641708721 rel=stylesheet>
-<link href=/ubuntu2004/css/hugo-theme.css?1641708721 rel=stylesheet>
-<script src=/ubuntu2004/js/jquery-3.3.1.min.js?1641708721></script>
-<style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
-</head>
-<body data-url=/ubuntu2004/firewall/>
+<title>Firewall - Panduan Ubuntu Server 20.04 LTS</title><link href=/ubuntu2004/css/nucleus.css?1646373285 rel=stylesheet>
+<link href=/ubuntu2004/css/fontawesome-all.min.css?1646373285 rel=stylesheet>
+<link href=/ubuntu2004/css/hybrid.css?1646373285 rel=stylesheet>
+<link href=/ubuntu2004/css/featherlight.min.css?1646373285 rel=stylesheet>
+<link href=/ubuntu2004/css/perfect-scrollbar.min.css?1646373285 rel=stylesheet>
+<link href=/ubuntu2004/css/auto-complete.css?1646373285 rel=stylesheet>
+<link href=/ubuntu2004/css/atom-one-dark-reasonable.css?1646373285 rel=stylesheet>
+<link href=/ubuntu2004/css/theme.css?1646373285 rel=stylesheet>
+<link href=/ubuntu2004/css/tabs.css?1646373285 rel=stylesheet>
+<link href=/ubuntu2004/css/hugo-theme.css?1646373285 rel=stylesheet>
+<script src=/ubuntu2004/js/jquery-3.3.1.min.js?1646373285></script>
+<style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/ubuntu2004/firewall/>
 <nav id=sidebar>
 <div id=header-wrapper>
 <div id=header>
 <a href=https://musaamin.github.io/ubuntu2004/><img src=https://raw.githubusercontent.com/musaamin/ubuntu2004/main/static/images/logo.png></a>
-</div>
-<div class=searchbox>
+</div><div class=searchbox>
 <label for=search-by><i class="fas fa-search"></i></label>
 <input data-search-input id=search-by type=search placeholder=Search...>
 <span data-search-clear><i class="fas fa-times"></i></span>
-</div>
-<script type=text/javascript src=/ubuntu2004/js/lunr.min.js?1641708721></script>
-<script type=text/javascript src=/ubuntu2004/js/auto-complete.js?1641708721></script>
+</div><script type=text/javascript src=/ubuntu2004/js/lunr.min.js?1646373285></script>
+<script type=text/javascript src=/ubuntu2004/js/auto-complete.js?1646373285></script>
 <script type=text/javascript>var baseurl="https://musaamin.github.io/ubuntu2004/"</script>
-<script type=text/javascript src=/ubuntu2004/js/search.js?1641708721></script>
-</div>
-<div class=highlightable>
+<script type=text/javascript src=/ubuntu2004/js/search.js?1646373285></script>
+</div><div class=highlightable>
 <ul class=topics>
 <li data-nav-id=/ubuntu2004/vps/ title="Virtual Private Server" class=dd-item>
 <a href=/ubuntu2004/vps/>
 1. Virtual Private Server
 </a>
-</li>
-<li data-nav-id=/ubuntu2004/ssh/ title="Secure Shell (SSH)" class=dd-item>
+</li><li data-nav-id=/ubuntu2004/ssh/ title="Secure Shell (SSH)" class=dd-item>
 <a href=/ubuntu2004/ssh/>
 2. Secure Shell (SSH)
 </a>
-</li>
-<li data-nav-id=/ubuntu2004/filetransfer/ title="File Transfer" class=dd-item>
+</li><li data-nav-id=/ubuntu2004/filetransfer/ title="File Transfer" class=dd-item>
 <a href=/ubuntu2004/filetransfer/>
 3. File Transfer
 </a>
-</li>
-<li data-nav-id=/ubuntu2004/timezone/ title="Time Zone" class=dd-item>
+</li><li data-nav-id=/ubuntu2004/timezone/ title="Time Zone" class=dd-item>
 <a href=/ubuntu2004/timezone/>
 4. Time Zone
 </a>
-</li>
-<li data-nav-id=/ubuntu2004/mariadb/ title="MariaDB Database" class=dd-item>
+</li><li data-nav-id=/ubuntu2004/mariadb/ title="MariaDB Database" class=dd-item>
 <a href=/ubuntu2004/mariadb/>
 5. MariaDB Database
 </a>
-</li>
-<li data-nav-id=/ubuntu2004/apache/ title="Apache Web Server" class=dd-item>
+</li><li data-nav-id=/ubuntu2004/apache/ title="Apache Web Server" class=dd-item>
 <a href=/ubuntu2004/apache/>
 6. Apache Web Server
 </a>
@@ -72,25 +61,19 @@
 <a href=/ubuntu2004/apache/php-apache/>
 PHP dengan Apache
 </a>
-</li>
-<li data-nav-id=/ubuntu2004/apache/phpmyadmin-apache/ title="phpMyAdmin dengan Apache" class=dd-item>
+</li><li data-nav-id=/ubuntu2004/apache/phpmyadmin-apache/ title="phpMyAdmin dengan Apache" class=dd-item>
 <a href=/ubuntu2004/apache/phpmyadmin-apache/>
 phpMyAdmin dengan Apache
 </a>
-</li>
-<li data-nav-id=/ubuntu2004/apache/letsencrypt-apache/ title="Let's Encrypt untuk Apache" class=dd-item>
+</li><li data-nav-id=/ubuntu2004/apache/letsencrypt-apache/ title="Let's Encrypt untuk Apache" class=dd-item>
 <a href=/ubuntu2004/apache/letsencrypt-apache/>
 Let's Encrypt untuk Apache
 </a>
-</li>
-<li data-nav-id=/ubuntu2004/apache/wordpress-apache/ title="WordPress dengan Apache" class=dd-item>
+</li><li data-nav-id=/ubuntu2004/apache/wordpress-apache/ title="WordPress dengan Apache" class=dd-item>
 <a href=/ubuntu2004/apache/wordpress-apache/>
 WordPress dengan Apache
 </a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/ubuntu2004/nginx/ title="Nginx Web Server" class=dd-item>
+</li></ul></li><li data-nav-id=/ubuntu2004/nginx/ title="Nginx Web Server" class=dd-item>
 <a href=/ubuntu2004/nginx/>
 7. Nginx Web Server
 </a>
@@ -99,82 +82,57 @@ WordPress dengan Apache
 <a href=/ubuntu2004/nginx/php-nginx/>
 PHP dengan Nginx
 </a>
-</li>
-<li data-nav-id=/ubuntu2004/nginx/phpmyadmin-nginx/ title="phpMyAdmin dengan Nginx" class=dd-item>
+</li><li data-nav-id=/ubuntu2004/nginx/phpmyadmin-nginx/ title="phpMyAdmin dengan Nginx" class=dd-item>
 <a href=/ubuntu2004/nginx/phpmyadmin-nginx/>
 phpMyAdmin dengan Nginx
 </a>
-</li>
-<li data-nav-id=/ubuntu2004/nginx/letsencrypt-nginx/ title="Let's Encrypt untuk Nginx" class=dd-item>
+</li><li data-nav-id=/ubuntu2004/nginx/letsencrypt-nginx/ title="Let's Encrypt untuk Nginx" class=dd-item>
 <a href=/ubuntu2004/nginx/letsencrypt-nginx/>
 Let's Encrypt untuk Nginx
 </a>
-</li>
-<li data-nav-id=/ubuntu2004/nginx/wordpress-nginx/ title="WordPress dengan Nginx" class=dd-item>
+</li><li data-nav-id=/ubuntu2004/nginx/wordpress-nginx/ title="WordPress dengan Nginx" class=dd-item>
 <a href=/ubuntu2004/nginx/wordpress-nginx/>
 WordPress dengan Nginx
 </a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/ubuntu2004/composer/ title=Composer class=dd-item>
+</li></ul></li><li data-nav-id=/ubuntu2004/composer/ title=Composer class=dd-item>
 <a href=/ubuntu2004/composer/>
 8. Composer
 </a>
-</li>
-<li data-nav-id=/ubuntu2004/firewall/ title=Firewall class="dd-item
+</li><li data-nav-id=/ubuntu2004/firewall/ title=Firewall class="dd-item
 parent
 active">
 <a href=/ubuntu2004/firewall/>
 9. Firewall
 </a>
-</li>
-<li data-nav-id=/ubuntu2004/monitoring/ title="System Monitoring" class=dd-item>
+</li><li data-nav-id=/ubuntu2004/monitoring/ title="System Monitoring" class=dd-item>
 <a href=/ubuntu2004/monitoring/>
 10. System Monitoring
 </a>
-</li>
-<li data-nav-id=/ubuntu2004/log/ title="Log File" class=dd-item>
+</li><li data-nav-id=/ubuntu2004/log/ title="Log File" class=dd-item>
 <a href=/ubuntu2004/log/>
 11. Log File
 </a>
-</li>
-<li data-nav-id=/ubuntu2004/backup/ title="Backup Data" class=dd-item>
+</li><li data-nav-id=/ubuntu2004/backup/ title="Backup Data" class=dd-item>
 <a href=/ubuntu2004/backup/>
 12. Backup Data
 </a>
-</li>
-</ul>
-<section id=shortcuts>
-<h3>More</h3>
-<ul>
+</li></ul><section id=shortcuts>
+<h3>More</h3><ul>
 <li>
 <a class=padding href=https://musaamin.web.id><i class="fab fa-fw fa-firefox"></i> Blog</a>
-</li>
-<li>
+</li><li>
 <a class=padding href=https://www.youtube.com/musaamin><i class="fab fa-fw fa-youtube"></i> YouTube</a>
-</li>
-<li>
+</li><li>
 <a class=padding href=https://www.twitter.com/musaamin><i class="fab fa-fw fa-twitter"></i> Twitter</a>
-</li>
-<li>
+</li><li>
 <a class=padding href=https://www.facebook.com/musaaminwebid><i class="fab fa-fw fa-facebook"></i> Facebook</a>
-</li>
-<li>
+</li><li>
 <a class=padding href=https://github.com/musaamin><i class="fab fa-fw fa-github"></i> GitHub</a>
-</li>
-</ul>
-</section>
-<section id=footer>
+</li></ul></section><section id=footer>
 <center>
-<p>Built with <a href=https://github.com/matcornic/hugo-theme-learn><i class="fas fa-heart"></i></a> from <a href=https://getgrav.org>Grav</a> and <a href=https://gohugo.io/>Hugo</a></p>
-</center>
-</section>
-</div>
-</nav>
-<section id=body>
-<div id=overlay></div>
-<div class="padding highlightable">
+<p>Built with <a href=https://github.com/matcornic/hugo-theme-learn><i class="fas fa-heart"></i></a> from <a href=https://getgrav.org>Grav</a> and <a href=https://gohugo.io/>Hugo</a></p></center>
+</section></div></nav><section id=body>
+<div id=overlay></div><div class="padding highlightable">
 <div>
 <div id=top-bar>
 <div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb>
@@ -187,42 +145,17 @@ active">
 <span class=links>
 <a href=/ubuntu2004/>Home</a> > Firewall
 </span>
-</div>
-<div class=progress>
+</div><div class=progress>
 <div class=wrapper>
 <nav id=TableOfContents>
 <ul>
-<li><a href=#cloud-firewall>Cloud Firewall</a></li>
-<li><a href=#iptables>IPTables</a></li>
-<li><a href=#ufw>UFW</a></li>
-</ul>
-</nav>
-</div>
-</div>
-</div>
-</div>
-<div id=head-tags>
-</div>
-<div id=body-inner>
+<li><a href=#cloud-firewall>Cloud Firewall</a></li><li><a href=#iptables>IPTables</a></li><li><a href=#ufw>UFW</a></li></ul></nav></div></div></div></div><div id=head-tags>
+</div><div id=body-inner>
 <h1>
 Firewall
-</h1>
-<p>Firewall adalah sistem keamanan yang berfungsi untuk mengelola dan memantau trafik jaringan yang masuk dan keluar berdasarkan aturan keamanan (security rules) yang sudah ditentukan. Firewall dapat berupa perangkat keras atau perangkat lunak.</p>
-<p><img src=https://raw.githubusercontent.com/musaamin/ubuntu2004/main/static/images/topologi-firewall.jpg alt="Gambar Topologi Firewall"></p>
-<h2 id=cloud-firewall>Cloud Firewall</h2>
-<p>Beberapa penyedia cloud server memiliki fitur cloud firewall yang dapat dikonfigurasi melalui dashboard atau client area penyedia cloud. Cloud firewall tersebut merupakan sistem yang terpisah dari server, sehingga tidak perlu melakukan konfigurasi secara langsung di server.</p>
-<p>Cloud firewall secara default mengijinkan semua trafik jaringan yang berasal dari server menuju keluar jaringan (Output/Outbound/Egress).</p>
-<p><img src=https://raw.githubusercontent.com/musaamin/ubuntu2004/main/static/images/cloud-firewall-outbound.jpg alt="Gambar Firewall Rule Outbund"></p>
-<p>Sedangkan untuk trafik jaringan dari luar menuju ke dalam server (Input/Inbound/Ingress) secara default diblokir semua, kecuali rule yang dituliskan.</p>
-<p><img src=https://raw.githubusercontent.com/musaamin/ubuntu2004/main/static/images/cloud-firewall-inbound.jpg alt="Gambar Firewall Rule Outbund"></p>
-<h2 id=iptables>IPTables</h2>
-<p>iptables adalah firewall berupa perangkat lunak yang secara default sudah tersedia pada sistem operasi berbasis Linux.</p>
-<p>Install iptables-persistent, agar rules yang sudah dimasukkan ke dalam iptables tetap tersimpan meskipun server sudah direstart.</p>
-<pre tabindex=0><code>sudo apt install iptables-persistent
-</code></pre><p>Menampilkan rules iptables.</p>
-<pre tabindex=0><code>sudo iptables -L
-</code></pre><p>Hasilnya jika belum ada rules.</p>
-<pre tabindex=0><code>Chain INPUT (policy ACCEPT)
+</h1><p>Firewall adalah sistem keamanan yang berfungsi untuk mengelola dan memantau trafik jaringan yang masuk dan keluar berdasarkan aturan keamanan (security rules) yang sudah ditentukan. Firewall dapat berupa perangkat keras atau perangkat lunak.</p><p><img src=https://raw.githubusercontent.com/musaamin/ubuntu2004/main/static/images/topologi-firewall.jpg alt="Gambar Topologi Firewall"></p><h2 id=cloud-firewall>Cloud Firewall</h2><p>Beberapa penyedia cloud server memiliki fitur cloud firewall yang dapat dikonfigurasi melalui dashboard atau client area penyedia cloud. Cloud firewall tersebut merupakan sistem yang terpisah dari server, sehingga tidak perlu melakukan konfigurasi secara langsung di server.</p><p>Cloud firewall secara default mengijinkan semua trafik jaringan yang berasal dari server menuju keluar jaringan (Output/Outbound/Egress).</p><p><img src=https://raw.githubusercontent.com/musaamin/ubuntu2004/main/static/images/cloud-firewall-outbound.jpg alt="Gambar Firewall Rule Outbund"></p><p>Sedangkan untuk trafik jaringan dari luar menuju ke dalam server (Input/Inbound/Ingress) secara default diblokir semua, kecuali rule yang dituliskan.</p><p><img src=https://raw.githubusercontent.com/musaamin/ubuntu2004/main/static/images/cloud-firewall-inbound.jpg alt="Gambar Firewall Rule Outbund"></p><h2 id=iptables>IPTables</h2><p>iptables adalah firewall berupa perangkat lunak yang secara default sudah tersedia pada sistem operasi berbasis Linux.</p><p>Install iptables-persistent, agar rules yang sudah dimasukkan ke dalam iptables tetap tersimpan meskipun server sudah direstart.</p><pre tabindex=0><code>sudo apt install iptables-persistent
+</code></pre><p>Menampilkan rules iptables.</p><pre tabindex=0><code>sudo iptables -L
+</code></pre><p>Hasilnya jika belum ada rules.</p><pre tabindex=0><code>Chain INPUT (policy ACCEPT)
 target     prot opt source               destination         
 
 Chain FORWARD (policy ACCEPT)
@@ -230,17 +163,14 @@ target     prot opt source               destination
 
 Chain OUTPUT (policy ACCEPT)
 target     prot opt source               destination 
-</code></pre><p>Memasukkan rules iptables.</p>
-<pre tabindex=0><code>sudo iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+</code></pre><p>Memasukkan rules iptables.</p><pre tabindex=0><code>sudo iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
 sudo iptables -A INPUT -p icmp -j ACCEPT
 sudo iptables -A INPUT -p tcp --dport 50000 -j ACCEPT
 sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
 sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT
 sudo iptables -P INPUT DROP
 sudo iptables -P FORWARD DROP
-</code></pre><p>Rules di atas hanya mengijinkan trafik pada protokol ICMP, port 80 (HTTP), port 443 (HTTPS), dan port 50000 (Custom port SSH). Selain yang tertulis dalam rules semuanya diblokir.</p>
-<p>Menampilkan kembali rules untuk melihat rules yang telah dimasukkan.</p>
-<pre tabindex=0><code>sudo iptables -L
+</code></pre><p>Rules di atas hanya mengijinkan trafik pada protokol ICMP, port 80 (HTTP), port 443 (HTTPS), dan port 50000 (Custom port SSH). Selain yang tertulis dalam rules semuanya diblokir.</p><p>Menampilkan kembali rules untuk melihat rules yang telah dimasukkan.</p><pre tabindex=0><code>sudo iptables -L
 
 Chain INPUT (policy DROP)
 target     prot opt source               destination         
@@ -255,40 +185,28 @@ target     prot opt source               destination
 
 Chain OUTPUT (policy ACCEPT)
 target     prot opt source               destination
-</code></pre><p>Save dan Reload rules iptables.</p>
-<pre tabindex=0><code>sudo netfilter-persistent save
+</code></pre><p>Save dan Reload rules iptables.</p><pre tabindex=0><code>sudo netfilter-persistent save
 sudo netfilter-persistent reload
-</code></pre><p>Restart server.</p>
-<pre tabindex=0><code>sudo reboot
-</code></pre><p>Cek kembali rules iptables, apakah rules yang dimasukkan sebelumnya masih ada.</p>
-<pre tabindex=0><code>sudo iptables -L
-</code></pre><p>Jika ingin menghapus semua rules, gunakan opsi -F, tapi sebelumnya ubah kembali policy INPUT menjadi ACCEPT karena kalau masih DROP koneksi SSH akan terputus ketika semua rules telah terhapus.</p>
-<pre tabindex=0><code>sudo iptables -P INPUT ACCEPT
+</code></pre><p>Restart server.</p><pre tabindex=0><code>sudo reboot
+</code></pre><p>Cek kembali rules iptables, apakah rules yang dimasukkan sebelumnya masih ada.</p><pre tabindex=0><code>sudo iptables -L
+</code></pre><p>Jika ingin menghapus semua rules, gunakan opsi -F, tapi sebelumnya ubah kembali policy INPUT menjadi ACCEPT karena kalau masih DROP koneksi SSH akan terputus ketika semua rules telah terhapus.</p><pre tabindex=0><code>sudo iptables -P INPUT ACCEPT
 sudo iptables -P FORWARD ACCEPT
 sudo iptables -F
 sudo netfilter-persistent save
 sudo netfilter-persistent reload
-</code></pre><h2 id=ufw>UFW</h2>
-<p>UFW (Uncomplicated Firewall) adalah sebuah aplikasi yang merupakan interface dari IPTables dengan tujuan untuk memudahkan dalam konfigurasi IPTables.</p>
-<p>Install UFW.</p>
-<pre tabindex=0><code>sudo apt install ufw
-</code></pre><p>Memeriksa status UFW apakah aktif atau tidak.</p>
-<pre tabindex=0><code>sudo ufw status
-</code></pre><p>Mengijinkan port ssh, http, https, dan custom port 50000/tcp.</p>
-<pre tabindex=0><code>sudo ufw allow ssh
+</code></pre><h2 id=ufw>UFW</h2><p>UFW (Uncomplicated Firewall) adalah sebuah aplikasi yang merupakan interface dari IPTables dengan tujuan untuk memudahkan dalam konfigurasi IPTables.</p><p>Install UFW.</p><pre tabindex=0><code>sudo apt install ufw
+</code></pre><p>Memeriksa status UFW apakah aktif atau tidak.</p><pre tabindex=0><code>sudo ufw status
+</code></pre><p>Mengijinkan port ssh, http, https, dan custom port 50000/tcp.</p><pre tabindex=0><code>sudo ufw allow ssh
 sudo ufw allow http
 sudo ufw allow https
 sudo ufw allow 50000/tcp
 sudo ufw allow 12345/tcp
-</code></pre><p>Mengubah default policy incoming menjadi deny</p>
-<pre tabindex=0><code>sudo ufw default deny incoming 
-</code></pre><p>Mengaktifkan UFW dan menampilkan rule-nya.</p>
-<pre tabindex=0><code>sudo ufw enable
+</code></pre><p>Mengubah default policy incoming menjadi deny</p><pre tabindex=0><code>sudo ufw default deny incoming 
+</code></pre><p>Mengaktifkan UFW dan menampilkan rule-nya.</p><pre tabindex=0><code>sudo ufw enable
 sudo ufw status
 sudo ufw status verbose
 sudo ufw status numbered
-</code></pre><p>Hasil <strong>ufw status numbered</strong></p>
-<pre tabindex=0><code>Status: active
+</code></pre><p>Hasil <strong>ufw status numbered</strong></p><pre tabindex=0><code>Status: active
 
      To                         Action      From
      --                         ------      ----
@@ -302,39 +220,27 @@ sudo ufw status numbered
 [ 8] 443/tcp (v6)               ALLOW IN    Anywhere (v6)             
 [ 9] 50000/tcp (v6)             ALLOW IN    Anywhere (v6)             
 [10] 12345/tcp (v6)             ALLOW IN    Anywhere (v6)
-</code></pre><p>Menghapus salah satu rule berdasarkan nomor urut.</p>
-<pre tabindex=0><code>sudo ufw delete 5
-</code></pre><p>Menghapus berdasarkan rule, akan menghapus rule v4 dan v6.</p>
-<pre tabindex=0><code>sudo ufw delete allow 12345/tcp
-</code></pre><p>Jika ingin menghapus semua rule, mengembalikan default policy incoming, dan menonaktifkan UFW.</p>
-<pre tabindex=0><code>sudo ufw default allow incoming
+</code></pre><p>Menghapus salah satu rule berdasarkan nomor urut.</p><pre tabindex=0><code>sudo ufw delete 5
+</code></pre><p>Menghapus berdasarkan rule, akan menghapus rule v4 dan v6.</p><pre tabindex=0><code>sudo ufw delete allow 12345/tcp
+</code></pre><p>Jika ingin menghapus semua rule, mengembalikan default policy incoming, dan menonaktifkan UFW.</p><pre tabindex=0><code>sudo ufw default allow incoming
 sudo ufw reset
 sudo ufw disable
 sudo ufw status
-</code></pre>
-<footer class=footline>
-</footer>
-</div>
-</div>
-<div id=navigation>
+</code></pre><footer class=footline>
+</footer></div></div><div id=navigation>
 <a class="nav nav-prev" href=/ubuntu2004/composer/ title=Composer> <i class="fa fa-chevron-left"></i></a>
 <a class="nav nav-next" href=/ubuntu2004/monitoring/ title="System Monitoring" style=margin-right:0><i class="fa fa-chevron-right"></i></a>
-</div>
-</section>
-<div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
-<div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
-</div>
-<script src=/ubuntu2004/js/clipboard.min.js?1641708721></script>
-<script src=/ubuntu2004/js/perfect-scrollbar.min.js?1641708721></script>
-<script src=/ubuntu2004/js/perfect-scrollbar.jquery.min.js?1641708721></script>
-<script src=/ubuntu2004/js/jquery.sticky.js?1641708721></script>
-<script src=/ubuntu2004/js/featherlight.min.js?1641708721></script>
-<script src=/ubuntu2004/js/highlight.pack.js?1641708721></script>
+</div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
+<div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/ubuntu2004/js/clipboard.min.js?1646373285></script>
+<script src=/ubuntu2004/js/perfect-scrollbar.min.js?1646373285></script>
+<script src=/ubuntu2004/js/perfect-scrollbar.jquery.min.js?1646373285></script>
+<script src=/ubuntu2004/js/jquery.sticky.js?1646373285></script>
+<script src=/ubuntu2004/js/featherlight.min.js?1646373285></script>
+<script src=/ubuntu2004/js/highlight.pack.js?1646373285></script>
 <script>hljs.initHighlightingOnLoad()</script>
-<script src=/ubuntu2004/js/modernizr.custom-3.6.0.js?1641708721></script>
-<script src=/ubuntu2004/js/learn.js?1641708721></script>
-<script src=/ubuntu2004/js/hugo-learn.js?1641708721></script>
-<script src=/ubuntu2004/mermaid/mermaid.js?1641708721></script>
+<script src=/ubuntu2004/js/modernizr.custom-3.6.0.js?1646373285></script>
+<script src=/ubuntu2004/js/learn.js?1646373285></script>
+<script src=/ubuntu2004/js/hugo-learn.js?1646373285></script>
+<script src=/ubuntu2004/mermaid/mermaid.js?1646373285></script>
 <script>mermaid.initialize({startOnLoad:!0})</script>
-</body>
-</html>
+</body></html>
