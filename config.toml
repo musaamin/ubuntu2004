@@ -1,0 +1,44 @@
+baseURL = "https://musaamin.github.io/ubuntu2004/"
+publishDir = "docs"
+title = "Panduan Ubuntu Server 20.04 LTS"
+theme = "learn"
+
+[params]
+ author = "Musa Amin"
+ description = "Panduan Ubuntu Server 20.04 LTS"
+ titleSeparator = " - "
+ disableBreadcrumb = false
+ disableLandingPageButton = true
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+[[menu.shortcuts]]
+ name = "<i class='fas fa-link'></i> Blog"
+ url = "https://musaamin.web.id/blog"
+ weight = 1
+
+[[menu.shortcuts]]
+ name = "<i class='fas fa-link'></i> YouTube"
+ url = "https://www.youtube.com/musaamin"
+ weight = 2
+
+[[menu.shortcuts]]
+ name = "<i class='fas fa-link'></i> Twitter"
+ url = "https://www.twitter.com/musaamin"
+ weight = 3
+
+[[menu.shortcuts]] 
+ name = "<i class='fas fa-link'></i> Facebook"
+ url = "https://www.facebook.com/musaaminwebid"
+ weight = 4 
+
+[[menu.shortcuts]] 
+ name = "<i class='fas fa-link'></i> GitHub"
+ url = "https://github.com/musaamin"
+ weight = 5
+
+[[menu.shortcuts]] 
+ name = "<i class='fas fa-link'></i> Donasi"
+ url = "https://saweria.co/musaamin"
+ weight = 6 

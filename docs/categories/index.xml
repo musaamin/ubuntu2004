@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Panduan Ubuntu Server 20.04 LTS</title>
+    <link>http://localhost:1313/ubuntu2004/categories/</link>
+    <description>Recent content in Categories on Panduan Ubuntu Server 20.04 LTS</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <atom:link href="http://localhost:1313/ubuntu2004/categories/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
